@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: Portainer
+    hostname: portainer
+    command: -H unix:///var/run/docker.sock
+    restart: always
+    network_mode: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - data:/data
+    env_file:
+      - ../.env
+      - ./.env
+
+volumes:
+  data:
