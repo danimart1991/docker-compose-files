@@ -4,8 +4,13 @@
 
 # You can whitelist files/folders with !, these will not be ignored.
 !*/
+!docker-compose.yaml
+!docker-compose.yml
+!.env.template
+!README.md
 !.gitignore
 !.github/*
 !LICENSE
 
-# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
+# Ensure these files are ignored, otherwise your secret data/credentials will leak.
+.env
