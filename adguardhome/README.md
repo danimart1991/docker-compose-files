@@ -13,3 +13,4 @@
 ## Tips
 
 - If you want to use DHCP feature, `--network host` must be used.
+- Original Dockerfile change the base paths for configuration and data, Docker-Compose file must replicate this.

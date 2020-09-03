@@ -1,6 +1,6 @@
 # Portainer
 
-Portainer simplifies container management in Docker, Swarm, Kubernetes, ACI and Edge environments. It's used by software engineers to speed up software deployments, troubleshoot problems and simplify migrations.
+[Portainer](https://www.portainer.io/) simplifies container management in Docker, Swarm, Kubernetes, ACI and Edge environments. It's used by software engineers to speed up software deployments, troubleshoot problems and simplify migrations.
 
 ## Deployment
 
