@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  filebrowser:
+    image: adguard/adguardhome:latest
+    container_name: AdGuard_Home
+    hostname: adguardhome
+    command: --no-check-update -c /opt/adguardhome/conf/AdGuardHome.yaml -w /opt/adguardhome/work --no-check-update
+    restart: always
+    network_mode: host
+    volumes:
+      - work:/opt/adguardhome/work
+      - config:/opt/adguardhome/conf
+    env_file:
+      - ../.env
+      - ./.env
+
+volumes:
+  work:
+  config:
