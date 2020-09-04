@@ -20,6 +20,10 @@ Sorted alphabetically
 
 - [File Browser](https://filebrowser.org/)
 
+## N
+
+- [Netdata Agent](https://www.netdata.cloud/agent/)
+
 ## O
 
 - [Ouroboros](https://github.com/pyouroboros/ouroboros)
