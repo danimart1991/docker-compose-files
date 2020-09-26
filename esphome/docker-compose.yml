@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+  esphome:
+    image: esphome/esphome:latest
+    container_name: ESPHome
+    hostname: esphome
+    restart: always
+    network_mode: host
+    # port: 6052
+    # devices:
+    #   - "/dev/ttyUSB0:/dev/ttyUSB0"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - config:/config:rw
+    env_file:
+      - ../.env
+      - ./.env
+
+volumes:
+  config:

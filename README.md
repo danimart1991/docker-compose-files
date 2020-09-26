@@ -16,6 +16,10 @@ Sorted alphabetically
 
 - [AdGuard Home](https://adguard.com/es/adguard-home/overview.html)
 
+## E
+
+- [ESPHome](https://esphome.io/)
+
 ## F
 
 - [File Browser](https://filebrowser.org/)
