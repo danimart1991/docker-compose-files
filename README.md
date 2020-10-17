@@ -24,6 +24,10 @@ Sorted alphabetically
 
 - [File Browser](https://filebrowser.org/)
 
+## H
+
+- [Home Assistant](https://www.home-assistant.io/)
+
 ## N
 
 - [Netdata Agent](https://www.netdata.cloud/agent/)
