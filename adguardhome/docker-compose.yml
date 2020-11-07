@@ -5,12 +5,14 @@ services:
     image: adguard/adguardhome:latest
     container_name: AdGuard_Home
     hostname: adguardhome
-    command: --no-check-update -c /opt/adguardhome/conf/AdGuardHome.yaml -w /opt/adguardhome/work --no-check-update
+    command: --no-check-update -c /opt/adguardhome/conf/AdGuardHome.yaml -w /opt/adguardhome/work
     restart: always
     network_mode: host
     volumes:
       - work:/opt/adguardhome/work
       - config:/opt/adguardhome/conf
+      # Depends on Traextor container for DNSSEC/SSL certificates
+      - traextor_certs:/opt/adguardhome/certs
     env_file:
       - ../.env
       - ./.env
@@ -18,3 +20,4 @@ services:
 volumes:
   work:
   config:
+  traextor_certs:
