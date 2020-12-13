@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  filebrowser:
+    image: danimart1991/azure-dns-updater:latest
+    container_name: Azure_DNS_Updater
+    hostname: azure_dns_updater
+    restart: always
+    network_mode: host
+    env_file:
+      - ../.env
+      - ./.env
