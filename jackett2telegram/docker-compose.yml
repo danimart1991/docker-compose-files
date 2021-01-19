@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  jackett2telegram:
+    image: danimart1991/jackett2telegram:latest
+    container_name: Jackett2Telegram
+    hostname: jackett2telegram
+    restart: always
+    network_mode: host
+    volumes:
+      - config:/app/config
+    env_file:
+      - ../.env
+      - ./.env
+
+volumes:
+  config:

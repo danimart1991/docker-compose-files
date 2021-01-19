@@ -29,6 +29,10 @@ Sorted alphabetically
 
 - [Home Assistant](https://www.home-assistant.io/)
 
+## J
+
+- [Jackett2Telegram (Jackett RSS to Telegram Bot)](https://github.com/danimart1991/jackett2telegram)
+
 ## N
 
 - [Netdata Agent](https://www.netdata.cloud/agent/)
