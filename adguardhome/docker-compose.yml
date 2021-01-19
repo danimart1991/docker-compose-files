@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  filebrowser:
+  adguardhome:
     image: adguard/adguardhome:latest
     container_name: AdGuard_Home
     hostname: adguardhome
