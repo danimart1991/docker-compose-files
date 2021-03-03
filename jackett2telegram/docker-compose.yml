@@ -8,10 +8,7 @@ services:
     restart: always
     network_mode: host
     volumes:
-      - config:/app/config
+      - /var/docker/jackett2telegram_config:/app/config
     env_file:
       - ../.env
       - ./.env
-
-volumes:
-  config:

@@ -7,12 +7,9 @@ services:
     hostname: home_assistant
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - config:/config
+      - /var/docker/homeassistant_config:/config
     restart: always
     network_mode: host
     env_file:
       - ../.env
       - ./.env
-
-volumes:
-  config:

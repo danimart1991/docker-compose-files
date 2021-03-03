@@ -13,10 +13,7 @@ services:
     #   - "/dev/ttyUSB0:/dev/ttyUSB0"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - config:/config:rw
+      - /var/docker/esphome_config:/config:rw
     env_file:
       - ../.env
       - ./.env
-
-volumes:
-  config:

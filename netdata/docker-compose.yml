@@ -14,8 +14,8 @@ services:
     security_opt:
       - apparmor:unconfined
     volumes:
-      - cache:/var/cache/netdata
-      - lib:/var/lib/netdata
+      - /var/docker/netdata_cache:/var/cache/netdata
+      - /var/docker/netdata_lib:/var/lib/netdata
       - /etc/passwd:/host/etc/passwd:ro
       - /etc/group:/host/etc/group:ro
       - /proc:/host/proc:ro
@@ -25,7 +25,3 @@ services:
     env_file:
       - ../.env
       - ./.env
-
-volumes:
-  cache:
-  lib:
