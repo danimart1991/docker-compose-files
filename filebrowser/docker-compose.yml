@@ -11,6 +11,7 @@ services:
       - 8086:80
     volumes:
       - /:/srv
+      - /var/docker/filebrowser_config/database.db:/database.db
     env_file:
       - ../.env
       - ./.env
