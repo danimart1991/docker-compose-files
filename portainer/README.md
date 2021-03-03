@@ -9,3 +9,7 @@
 - Setup secrets (`<secret>`) in any.
 - Modify the compose with your own configuration.
 - Deploy with `docker-compose up -d`.
+
+## Tips
+
+- Portainer expose a TCP tunnel server over the port `8000`. It's optional and is only required if you plan to use the Edge compute features with Edge agents.
