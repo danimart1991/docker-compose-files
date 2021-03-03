@@ -6,8 +6,9 @@ services:
     container_name: ESPHome
     hostname: esphome
     restart: always
-    network_mode: host
-    # port: 6052
+    network_mode: bridge
+    ports:
+      - 6052:6052
     # devices:
     #   - "/dev/ttyUSB0:/dev/ttyUSB0"
     volumes:
