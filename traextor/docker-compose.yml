@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  traextor:
+    image: djarbz/traextor:latest
+    container_name: Traextor
+    hostname: traextor
+    restart: always
+    network_mode: host
+    volumes:
+      - /var/run/docker.socket:/var/run/docker.socket
+      - /var/docker/traextor_certs:/certs
+      # Depends on Traefik container for DNSSEC/SSL certificates
+      - /var/docker/traefik_data:/acme
+    env_file:
+      - ../.env
+      - ./.env
