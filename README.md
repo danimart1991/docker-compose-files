@@ -47,4 +47,5 @@ Sorted alphabetically
 
 ## T
 
+- [Traefik](https://traefik.io/traefik/)
 - [Traextor](https://gitlab.com/dj_arbz/traextor)

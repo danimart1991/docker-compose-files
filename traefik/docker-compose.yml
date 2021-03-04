@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  traefik:
+    image: traefik:latest
+    container_name: Traefik
+    hostname: traefik
+    restart: always
+    network_mode: bridge
+    ports:
+      - 443:443/tcp
+      - 80:80/tcp
+      - 8080:8080/tcp
+    volumes:
+      - /var/run/docker.socket:/var/run/docker.socket:ro
+      - /var/docker/traefik_data:/etc/traefik
+    env_file:
+      - ../.env
+      - ./.env
