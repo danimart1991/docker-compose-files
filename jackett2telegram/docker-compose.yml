@@ -9,6 +9,7 @@ services:
     network_mode: host
     volumes:
       - /var/docker/jackett2telegram_config:/app/config
+      - /media/hdd2/downloads/blackhole:/app/blackhole
     env_file:
       - ../.env
       - ./.env
