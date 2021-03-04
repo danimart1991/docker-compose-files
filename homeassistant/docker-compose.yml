@@ -5,6 +5,8 @@ services:
     image: homeassistant/home-assistant:stable
     container_name: Home_Assistant
     hostname: home_assistant
+    healthcheck:
+      test: "curl -Lf http://localhost:8123"
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/docker/homeassistant_config:/config
