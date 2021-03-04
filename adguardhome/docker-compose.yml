@@ -9,15 +9,10 @@ services:
     restart: always
     network_mode: host
     volumes:
-      - work:/opt/adguardhome/work
-      - config:/opt/adguardhome/conf
+      - /var/docker/adguardhome_work:/opt/adguardhome/work
+      - /var/docker/adguardhome_config:/opt/adguardhome/conf
       # Depends on Traextor container for DNSSEC/SSL certificates
-      - traextor_certs:/opt/adguardhome/certs
+      - /var/docker/traextor_certs:/opt/adguardhome/certs
     env_file:
       - ../.env
       - ./.env
-
-volumes:
-  work:
-  config:
-  traextor_certs:
