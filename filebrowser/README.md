@@ -12,4 +12,16 @@
 
 ## Tips
 
-- By default, File Browser already have a configuration file with some defaults so you can just mount the root and the database. Although you can overwrite by mounting a directory to with a new config file. If you don't already have a database, make sure to create a new empty file under the path you specified. Otherwise, Docker will create an empty folder instead of an empty file, resulting in an error when mounting the database into the container.
+- By default, *File Browser* already have a configuration file with some defaults so you can just mount the root and the database. Although you can overwrite by mounting a directory to with a new config file. If you don't already have a database, make sure to create a new empty file under the path you specified. Otherwise, Docker will create an empty folder instead of an empty file, resulting in an error when mounting the database into the container.
+- Generic `filebrowser.json` config:
+
+    ```json
+    {
+        "port": 80,
+        "baseURL": "",
+        "address": "",
+        "log": "stdout",
+        "database": "/database.db",
+        "root": "/srv"
+    }
+    ```
