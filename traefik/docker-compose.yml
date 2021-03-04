@@ -1,4 +1,4 @@
-version: '2'
+version: '2.1'
 
 services:
   traefik:
@@ -6,6 +6,8 @@ services:
     container_name: Traefik
     hostname: traefik
     restart: always
+    healthcheck:
+      test: "traefik healthcheck --ping"
     network_mode: bridge
     ports:
       - 443:443/tcp
