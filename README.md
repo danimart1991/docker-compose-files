@@ -45,6 +45,10 @@ Sorted alphabetically
 
 - [Portainer](https://www.portainer.io/)
 
+## Q
+
+- [qBittorrent](https://www.qbittorrent.org/)
+
 ## T
 
 - [Traefik](https://traefik.io/traefik/)

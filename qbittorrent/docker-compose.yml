@@ -1,0 +1,20 @@
+version: "2.1"
+
+services:
+  qbittorrent:
+    image: ghcr.io/linuxserver/qbittorrent:latest
+    container_name: qBittorrent
+    hostname: qbittorrent
+    healthcheck:
+      test: "curl -Lf http://localhost:8085"
+    restart: always
+    network_mode: bridge
+    ports:
+      - 6881:6881/tcp
+      - 8085:8085/tcp
+    volumes:
+      - /var/docker/qbittorrent_config:/config
+      - /media/hdd2/downloads:/downloads
+    env_file:
+      - ../.env
+      - ./.env
