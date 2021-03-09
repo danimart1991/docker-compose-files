@@ -6,7 +6,9 @@
 
 # Docker-Compose Files
 
-This repository is a collection of Docker-Compose files to deploy services easily.
+This repository is a collection of Docker-Compose files to deploy services easily. 
+
+> All services must be configured before deployed modifing the `docker-compose.yml` and the `.env` files, and configured after deployed setting up the own service.
 
 ## Services
 
@@ -32,6 +34,7 @@ Sorted alphabetically
 ## J
 
 - [Jackett2Telegram (Jackett RSS to Telegram Bot)](https://github.com/danimart1991/jackett2telegram)
+- [Jellyfin](https://jellyfin.org/)
 
 ## N
 
