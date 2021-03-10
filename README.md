@@ -17,6 +17,7 @@ Sorted alphabetically
 ### A
 
 - [AdGuard Home](https://adguard.com/es/adguard-home/overview.html)
+- [Auto Remove Torrents](https://github.com/jerrymakesjelly/autoremove-torrents)
 - [Azure DNS Updater](https://github.com/danimart1991/azure-dns-updater)
 
 ## E
