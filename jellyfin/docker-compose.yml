@@ -6,7 +6,7 @@ services:
     container_name: Jellyfin
     hostname: jellyfin
     restart: always
-    user: <PUID>:<PGID>
+    privileged: true
     network_mode: bridge
     ports:
       - 8096:8096/tcp

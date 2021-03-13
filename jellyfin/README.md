@@ -12,7 +12,6 @@
 
 ## Tips
 
-- `user` parameter could be easily filled using the commands `echo ${UID}` and `id -g`.
 - If you planned to use Transcoding, follow the [related documentation](https://jellyfin.org/docs/general/administration/hardware-acceleration.html). In my case, I use *VAAPI* on *Debian Buster*, so previously I need to run this commands:
 
     ```bash
