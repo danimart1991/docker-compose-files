@@ -12,6 +12,7 @@
 
 ## Tips
 
+- `JELLYFIN_PublishedServerUrl` environment variable is necessary if you want to use `network_mode bridge` in order to correctly show your host *IP* in the *Jellyfin Apps* in your home network.
 - If you planned to use Transcoding, follow the [related documentation](https://jellyfin.org/docs/general/administration/hardware-acceleration.html). In my case, I use *VAAPI* on *Debian Buster*, so previously I need to run this commands:
 
     ```bash
