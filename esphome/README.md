@@ -16,4 +16,4 @@
   
   More Info: https://github.com/esphome/issues/issues/641#issuecomment-534156628
 
-- Remove `devices` node if you don't want to use USB serial to program devices.
+- Remove `devices` node if you don't want to use USB serial to program devices. To obtain the attached Host USB device name you could use `$ sudo dmesg` command.
