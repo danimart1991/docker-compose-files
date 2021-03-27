@@ -1,0 +1,20 @@
+version: "2.1"
+
+services:
+  radarr:
+    image: ghcr.io/danimart1991/radarr:latest
+    container_name: Radarr
+    hostname: radarr
+    restart: always
+    healthcheck:
+      test: "curl -Lf http://localhost:7878 || exit 1"
+    network_mode: bridge
+    ports:
+      - 7878:7878/tcp
+    volumes:
+      - /media/hdd/movies:/movies
+      - /var/docker/radarr_config:/config
+      - /media/hdd2/downloads:/downloads
+    env_file:
+      - ../.env
+      - ./.env
