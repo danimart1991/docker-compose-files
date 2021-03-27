@@ -3,12 +3,12 @@ version: "2"
 services:
   autoremove-torrents:
     image: dantebarba/autoremove-torrents:1.7.1
-    container_name: Autoremove-Torrents
-    hostname: autoremove-torrents
+    container_name: AutoremoveTorrents
+    hostname: autoremovetorrents
     restart: always
     network_mode: bridge
     volumes:
-      - /var/docker/autoremove-torrents_config/config.yml:/app/config.yml
+      - /var/docker/autoremovetorrents_config/config.yml:/app/config.yml
     env_file:
       - ../.env
       - ./.env
