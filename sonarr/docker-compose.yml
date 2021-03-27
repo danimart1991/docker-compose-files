@@ -1,0 +1,20 @@
+version: "2.1"
+
+services:
+  radarr:
+    image: ghcr.io/danimart1991/sonarr:latest
+    container_name: Sonarr
+    hostname: sonarr
+    restart: always
+    healthcheck:
+      test: "curl -Lf http://localhost:8989 || exit 1"
+    network_mode: bridge
+    ports:
+      - 8989:8989/tcp
+    volumes:
+      - /media/hdd14tb/tv:/tv
+      - /var/docker/sonarr_config:/config
+      - /media/hdd2/downloads:/downloads
+    env_file:
+      - ../.env
+      - ./.env

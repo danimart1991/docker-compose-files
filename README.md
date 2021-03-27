@@ -58,6 +58,10 @@ Sorted alphabetically
 
 - [qBittorrent](https://www.qbittorrent.org/)
 
+## S
+
+- [Sonarr](https://sonarr.tv/)
+
 ## T
 
 - [Traefik](https://traefik.io/traefik/)
