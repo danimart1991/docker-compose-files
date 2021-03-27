@@ -34,6 +34,7 @@ Sorted alphabetically
 
 ## J
 
+- [Jackett](https://github.com/Jackett/Jackett)
 - [Jackett2Telegram (Jackett RSS to Telegram Bot)](https://github.com/danimart1991/jackett2telegram)
 - [Jellyfin](https://jellyfin.org/)
 
