@@ -6,6 +6,7 @@ services:
     container_name: Autoremove-Torrents
     hostname: autoremove-torrents
     restart: always
+    network_mode: bridge
     volumes:
       - /var/docker/autoremove-torrents_config/config.yml:/app/config.yml
     env_file:
