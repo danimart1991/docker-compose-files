@@ -1,0 +1,23 @@
+version: "2.1"
+
+services:
+  airdcpp-webclient:
+    image: gangefors/airdcpp-webclient:latest
+    container_name: airdcpp-webclient
+    hostname: airdcpp-webclient
+    restart: always
+    user: ${UID:-0}:${GID:-0}
+    network_mode: bridge
+    ports:
+      - 15206:15206/tcp
+      - 15207:15207/udp
+      - 15208:15208/tcp
+      - 5600:5600/tcp
+    volumes:
+      - /var/docker/airdcpp-webclient_data:/.airdcpp
+      - /media/hdd2/downloads/airdcpp:/Downloads
+      - /media/hdd/movies:/movies
+      - /media/hdd14tb/tv:/tv
+    env_file:
+      - ../.env
+      - ./.env
