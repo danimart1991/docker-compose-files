@@ -1,11 +1,12 @@
-version: '2'
+version: "2"
 
 services:
   ouroboros:
     image: pyouroboros/ouroboros:latest
     container_name: Ouroboros
     hostname: ouroboros
-    restart: always
+    # Need if RUN_ONCE=true
+    restart: "no"
     network_mode: host
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

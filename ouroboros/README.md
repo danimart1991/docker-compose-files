@@ -9,3 +9,9 @@
 - Setup secrets (`<secret>`) in any.
 - Modify the compose with your own configuration.
 - Deploy with `docker-compose up -d`.
+
+## Tips
+
+- I'm currently using an external cron to start *Ouroboros*, so I configure the app to `RUN_ONCE=true`. The variable `INTERVAL` is ignored.
+- If used with *Docker Hub*, `INTERVAL` variable must be setted to a value that [doesn't pull rate limits](https://docs.docker.com/docker-hub/download-rate-limit/).
+- Rest of environment variables available at [*Ouroboros Wiki*](https://github.com/pyouroboros/ouroboros/wiki/Usage).
