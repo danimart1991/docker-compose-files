@@ -3,7 +3,7 @@ version: "2.1"
 services:
   jackett:
     image: ghcr.io/hotio/jackett:latest
-    container_name: Jackett
+    container_name: jackett
     hostname: jackett
     restart: always
     healthcheck:
@@ -12,8 +12,9 @@ services:
     ports:
       - 9117:9117/tcp
     volumes:
-      - /var/docker/jackett_config:/config
-      # - /var/docker/jackett_definitions:/app/Definitions
+      - /docker/etc/jackett_config:/config
+      # Comment to use original .yaml definitions
+      - /docker/etc/jackett_definitions:/app/Definitions
     env_file:
       - ../.env
       - ./.env
