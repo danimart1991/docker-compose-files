@@ -1,18 +1,18 @@
-version: '2'
+version: "2"
 
 services:
   adguardhome:
     image: adguard/adguardhome:latest
-    container_name: AdGuard_Home
+    container_name: adguardhome
     hostname: adguardhome
     command: --no-check-update -c /opt/adguardhome/conf/AdGuardHome.yaml -w /opt/adguardhome/work
     restart: always
     network_mode: host
     volumes:
-      - /var/docker/adguardhome_work:/opt/adguardhome/work
-      - /var/docker/adguardhome_config:/opt/adguardhome/conf
+      - /docker/tmp/adguardhome_work:/opt/adguardhome/work
+      - /docker/etc/adguardhome_config:/opt/adguardhome/conf
       # Depends on Traextor container for DNSSEC/SSL certificates
-      - /var/docker/traextor_certs:/opt/adguardhome/certs
+      - /docker/tmp/traextor_certs:/opt/adguardhome/certs
     env_file:
       - ../.env
       - ./.env
