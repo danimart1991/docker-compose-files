@@ -1,9 +1,9 @@
-version: '2'
+version: "2"
 
 services:
   traefik:
     image: traefik:latest
-    container_name: Traefik
+    container_name: traefik
     hostname: traefik
     restart: always
     network_mode: bridge
@@ -13,7 +13,8 @@ services:
       - 8080:8080/tcp
     volumes:
       - /var/run/docker.socket:/var/run/docker.socket:ro
-      - /var/docker/traefik_data:/etc/traefik
+      - /docker/etc/traefik_data:/etc/traefik
+      - /docker/tmp/traefik_log:/var/log/traefik
     env_file:
       - ../.env
       - ./.env
