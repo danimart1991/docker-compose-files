@@ -3,7 +3,7 @@ version: "2"
 services:
   ouroboros:
     image: pyouroboros/ouroboros:latest
-    container_name: Ouroboros
+    container_name: ouroboros
     hostname: ouroboros
     # Need if RUN_ONCE=true
     restart: "no"
