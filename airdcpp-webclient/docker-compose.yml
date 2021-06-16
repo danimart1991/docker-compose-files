@@ -9,12 +9,11 @@ services:
     user: ${UID:-0}:${GID:-0}
     network_mode: bridge
     ports:
-      - 15206:15206/tcp
-      - 15207:15207/udp
-      - 15208:15208/tcp
+      - 21248:21248
+      - 21249:21249/tcp
       - 5600:5600/tcp
     volumes:
-      - /var/docker/airdcpp-webclient_data:/.airdcpp
+      - /docker/etc/airdcpp-webclient_data:/.airdcpp
       - /media/hdd2/downloads/airdcpp:/Downloads
       - /media/hdd/movies:/movies
       - /media/hdd14tb/tv:/tv
