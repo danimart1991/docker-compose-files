@@ -3,7 +3,7 @@ version: "2.1"
 services:
   qbittorrent:
     image: ghcr.io/linuxserver/qbittorrent:latest
-    container_name: qBittorrent
+    container_name: qbittorrent
     hostname: qbittorrent
     healthcheck:
       test: "curl -Lf http://localhost:8085"
@@ -13,7 +13,7 @@ services:
       - 6881:6881/tcp
       - 8085:8085/tcp
     volumes:
-      - /var/docker/qbittorrent_config:/config
+      - /docker/etc/qbittorrent_config:/config
       - /media/hdd2/downloads:/downloads
     env_file:
       - ../.env
