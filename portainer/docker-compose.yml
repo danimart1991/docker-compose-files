@@ -1,9 +1,9 @@
-version: '2'
+version: "2.1"
 
 services:
   portainer:
     image: portainer/portainer-ce:latest
-    container_name: Portainer
+    container_name: portainer
     hostname: portainer
     command: -H unix:///var/run/docker.sock
     restart: always
@@ -13,7 +13,7 @@ services:
       #- 8000:8000
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /var/docker/portainer_data:/data
+      - /docker/etc/portainer_data:/data
     env_file:
       - ../.env
       - ./.env
