@@ -1,9 +1,9 @@
-version: '2'
+version: "2"
 
 services:
   filebrowser:
     image: filebrowser/filebrowser:latest
-    container_name: Filebrowser
+    container_name: filebrowser
     hostname: filebrowser
     restart: always
     network_mode: bridge
@@ -11,8 +11,8 @@ services:
       - 8086:80
     volumes:
       - /:/srv
-      - /var/docker/filebrowser_config/.filebrowser.json:/.filebrowser.json
-      - /var/docker/filebrowser_config/database.db:/database.db
+      - /docker/etc/filebrowser_config/.filebrowser.json:/.filebrowser.json
+      - /docker/etc/filebrowser_config/database.db:/database.db
     env_file:
       - ../.env
       - ./.env
