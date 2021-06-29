@@ -1,9 +1,9 @@
-version: '2'
+version: "2"
 
 services:
   esphome:
     image: esphome/esphome:latest
-    container_name: ESPHome
+    container_name: esphome
     hostname: esphome
     restart: always
     network_mode: bridge
@@ -13,7 +13,7 @@ services:
     #   - "/dev/ttyUSB0:/dev/ttyUSB0"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /var/docker/esphome_config:/config:rw
+      - /docker/etc/esphome_config:/config:rw
     env_file:
       - ../.env
       - ./.env
