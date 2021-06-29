@@ -1,10 +1,10 @@
-version: '2'
+version: "2"
 
 services:
-  azurednsupdater:
+  azure-dns-updater:
     image: danimart1991/azure-dns-updater:latest
-    container_name: Azure_DNS_Updater
-    hostname: azure_dns_updater
+    container_name: azure-dns-updater
+    hostname: azure-dns-updater
     restart: always
     network_mode: host
     env_file:
