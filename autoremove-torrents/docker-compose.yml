@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  autoremove-torrents:
+    image: dantebarba/autoremove-torrents:1.7.1
+    container_name: autoremove-torrents
+    hostname: autoremove-torrents
+    restart: always
+    network_mode: bridge
+    volumes:
+      - /docker/etc/autoremove-torrents_config/config.yml:/app/config.yml
+      # Empty autoremove-torrents.log file must be created previously on host
+      - /docker/tmp/autoremove-torrents_log/autoremove-torrents.log:/var/log/autoremove-torrents.log
+    env_file:
+      - ../.env
+      - ./.env
