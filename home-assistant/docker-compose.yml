@@ -1,0 +1,17 @@
+version: "2.1"
+
+services:
+  home-assistant:
+    image: homeassistant/home-assistant:stable
+    container_name: home-assistant
+    hostname: home-assistant
+    healthcheck:
+      test: "curl -Lf http://localhost:8123 || exit 1"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /docker/etc/home-assistant_config:/config
+    restart: always
+    network_mode: host
+    env_file:
+      - ../.env
+      - ./.env
