@@ -9,3 +9,7 @@
 - Setup secrets (`<secret>`) in any.
 - Modify the compose with your own configuration.
 - Deploy with `docker-compose up -d`.
+
+## Tips
+
+- To bind mount a specific folder for logs, in addition to add the volume (see `docker-compose.yml` file), you must change the default folder in `AirDC++ Settings -> System -> Logs` to `/airdcpp-webclient/logs/`.

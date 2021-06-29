@@ -14,6 +14,7 @@ services:
     volumes:
       - /var/run/docker.socket:/var/run/docker.socket:ro
       - /docker/etc/traefik_data:/etc/traefik
+      # Must change logs folder. See tips in README.
       - /docker/tmp/traefik_log:/var/log/traefik
     env_file:
       - ../.env
