@@ -1,14 +1,14 @@
-version: '2'
+version: "2"
 
 services:
   jackett2telegram:
     image: danimart1991/jackett2telegram:latest
-    container_name: Jackett2Telegram
+    container_name: jackett2telegram
     hostname: jackett2telegram
     restart: always
     network_mode: host
     volumes:
-      - /var/docker/jackett2telegram_config:/app/config
+      - /docker/etc/jackett2telegram_config:/app/config
       - /media/hdd2/downloads/blackhole:/app/blackhole
     env_file:
       - ../.env
