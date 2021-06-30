@@ -3,7 +3,7 @@ version: "2.1"
 services:
   radarr:
     image: ghcr.io/danimart1991/sonarr:latest
-    container_name: Sonarr
+    container_name: sonarr
     hostname: sonarr
     restart: always
     healthcheck:
@@ -13,7 +13,8 @@ services:
       - 8989:8989/tcp
     volumes:
       - /media/hdd14tb/tv:/tv
-      - /var/docker/sonarr_config:/config
+      - /docker/tmp/sonarr_config:/config
+      - /docker/etc/sonarr_backups:/config/Backups
       - /media/hdd2/downloads:/downloads
     env_file:
       - ../.env
