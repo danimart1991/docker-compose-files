@@ -1,0 +1,21 @@
+version: "2.1"
+
+services:
+  node-red:
+    image: nodered/node-red:latest-12
+    container_name: node-red
+    hostname: node-red
+    restart: always
+    network_mode: bridge
+    ports:
+      - 1880:1880/tcp
+    # Needed to use module node-red-contrib-dockerode
+    group_add:
+      - ${DOCKER_GID}
+    volumes:
+      - /docker/etc/node-red_data:/data
+      # Volume needed to use module node-red-contrib-dockerode
+      - /var/run/docker.sock:/var/run/docker.sock
+    env_file:
+      - ../.env
+      - ./.env

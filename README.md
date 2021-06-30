@@ -39,6 +39,10 @@ Sorted alphabetically
 - [Jackett2Telegram (Jackett RSS to Telegram Bot)](https://github.com/danimart1991/jackett2telegram)
 - [Jellyfin](https://jellyfin.org/)
 
+## N
+
+- [Node-RED](https://nodered.org/)
+
 ## O
 
 - [Ouroboros](https://github.com/pyouroboros/ouroboros)
