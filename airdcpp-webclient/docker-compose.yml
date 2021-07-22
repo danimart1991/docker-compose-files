@@ -16,7 +16,8 @@ services:
       - /docker/etc/airdcpp-webclient_data:/airdcpp-webclient/config
       # Must change default logs folder. See tips in README.
       - /docker/tmp/airdcpp-webclient_logs:/airdcpp-webclient/logs
-      - /media/hdd2/downloads/airdcpp:/Downloads
+      # Must change default downloads folder to /downloads.
+      - /media/hdd2/downloads/airdcpp:/downloads
       - /media/hdd/movies:/movies
       - /media/hdd14tb/tv:/tv
     env_file:
