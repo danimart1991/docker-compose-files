@@ -7,8 +7,6 @@ services:
     hostname: jellyfin
     restart: always
     privileged: true
-    healthcheck:
-      test: "curl -Lf http://localhost:8096/health || exit 1"
     network_mode: bridge
     ports:
       - 8096:8096/tcp
@@ -17,7 +15,8 @@ services:
     volumes:
       - /docker/etc/jellyfin_config:/config
       - /docker/tmp/jellyfin_cache:/cache
-      - /media/hdd:/media
+      - /media/hdd/movies:/media/movies
+      - /media/hdd14tb/tv:/media/tv
     # Transcoding using VAAPI (https://jellyfin.org/docs/general/server/transcoding.html)
     devices:
       - /dev/dri/card0:/dev/dri/card0
