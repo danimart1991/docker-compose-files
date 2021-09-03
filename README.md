@@ -19,7 +19,6 @@ Sorted alphabetically
 - [AdGuard Home](https://adguard.com/es/adguard-home/overview.html)
 - [AirDC++ Web Client](https://airdcpp-web.github.io/)
 - [Auto Remove Torrents](https://github.com/jerrymakesjelly/autoremove-torrents)
-- [Azure DNS Updater](https://github.com/danimart1991/azure-dns-updater)
 
 ## E
 
