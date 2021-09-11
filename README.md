@@ -20,6 +20,10 @@ Sorted alphabetically
 - [AirDC++ Web Client](https://airdcpp-web.github.io/)
 - [Auto Remove Torrents](https://github.com/jerrymakesjelly/autoremove-torrents)
 
+## D
+
+- [Duplicati](https://www.duplicati.com/)
+
 ## E
 
 - [ESPHome](https://esphome.io/)

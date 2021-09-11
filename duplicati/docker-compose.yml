@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  duplicati:
+    image: ghcr.io/linuxserver/duplicati:latest
+    container_name: duplicati
+    hostname: duplicati
+    restart: always
+    network_mode: bridge
+    ports:
+      - 8200:8200
+    volumes:
+      - /docker/etc/duplicati_config:/config:rw
+      - /docker/backups:/backups:rw
+      - /docker/etc:/source:ro
+    env_file:
+      - ../.env
+      - ./.env
