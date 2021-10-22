@@ -1,7 +1,7 @@
 version: "2.1"
 
 services:
-  radarr:
+  sonarr:
     image: ghcr.io/danimart1991/sonarr:latest
     container_name: sonarr
     hostname: sonarr
