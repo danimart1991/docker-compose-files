@@ -12,6 +12,7 @@
 
 ## Tips
 
+- _Duplicati_ needs access to all the files that goes to be backed up. Use the **root** user ids in the `.env` file.
 - Although you can create volumes of all the folders on the host that you want to make backup copies, I recommend trying to centralize all these folders in a specific point of the system so that the configuration is simpler and more scalable.
 
   More Info: https://www.danielmartingonzalez.com/en/backups-towards-docker/
