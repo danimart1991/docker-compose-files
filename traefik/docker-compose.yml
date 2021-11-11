@@ -10,7 +10,7 @@ services:
     ports:
       - 443:443/tcp
       - 80:80/tcp
-      - 8080:8080/tcp
+      - 8081:8080/tcp
     volumes:
       - /var/run/docker.socket:/var/run/docker.socket:ro
       - /docker/etc/traefik_data:/etc/traefik
