@@ -54,13 +54,13 @@ Sorted alphabetically
 
 - [Portainer](https://www.portainer.io/)
 
-## R
-
-- [Radarr](https://radarr.video/)
-
 ## Q
 
 - [qBittorrent](https://www.qbittorrent.org/)
+
+## R
+
+- [Radarr](https://radarr.video/)
 
 ## S
 

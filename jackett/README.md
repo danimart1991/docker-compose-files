@@ -12,4 +12,4 @@
 
 ## Tips
 
-- `/var/docker/jackett_definitions/jellyfin_cache:/app/Definitions` volume configuration is only necessary if you want to use your own Indexers custom definitions. If you want to use the common Jackett definitions, don't use it.
+- `/docker/etc/jackett_definitions:/app/Definitions` volume configuration is only necessary if you want to use your own Indexers custom definitions. If you want to use the common Jackett definitions, don't use it.

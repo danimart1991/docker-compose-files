@@ -23,3 +23,5 @@
     ```
 
     Then I could uncomment the devices configuration lines in the `docker-compose.yml` file.
+
+- In `.env` file, I move the log files to another folder in container so in host, I can make a volume in `tmp` folder to not make backups of log files.
