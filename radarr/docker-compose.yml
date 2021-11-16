@@ -16,6 +16,7 @@ services:
       - /docker/tmp/radarr_config:/config
       - /docker/etc/radarr_backups:/config/Backups
       - /media/hdd2/downloads:/downloads
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - TZ=${DOCKER_TZ}
+      - PUID=${DOCKER_PUID:-1000}
+      - PGID=${DOCKER_PGID:-1000}

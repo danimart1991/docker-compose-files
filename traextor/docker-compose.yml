@@ -12,6 +12,8 @@ services:
       - /docker/tmp/traextor_certs:/certs
       # Depends on Traefik container for DNSSEC/SSL certificates
       - /docker/etc/traefik_data:/acme
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - TZ=${DOCKER_TZ}
+      - ACME_FILE=${DOCKER_TRAEXTOR_ACMEFILE}
+      - CERT_PATH=${DOCKER_TRAEXTOR_CERTPATH}
+      - OUTPUT_DIR=${DOCKER_TRAEXTOR_OUTPUTDIR}

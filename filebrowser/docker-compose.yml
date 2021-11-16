@@ -13,6 +13,5 @@ services:
       - /:/srv
       - /docker/etc/filebrowser_config/.filebrowser.json:/.filebrowser.json
       - /docker/etc/filebrowser_config/database.db:/database.db
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - TZ=${DOCKER_TZ}

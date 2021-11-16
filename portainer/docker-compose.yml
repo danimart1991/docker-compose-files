@@ -14,6 +14,5 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /docker/etc/portainer_data:/data
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - TZ=${DOCKER_TZ}

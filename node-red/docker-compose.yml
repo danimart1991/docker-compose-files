@@ -11,11 +11,10 @@ services:
       - 1880:1880/tcp
     # Needed to use palette node-red-contrib-dockerode
     group_add:
-      - ${DOCKER_GID}
+      - ${DOCKER_GID:-998}
     volumes:
-      - /var/docker/nodered_data:/data
+      - /docker/etc/node-red_data:/data
       # Volume needed to use palette node-red-contrib-dockerode
       - /var/run/docker.sock:/var/run/docker.sock
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - TZ=${DOCKER_TZ}

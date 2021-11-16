@@ -11,6 +11,5 @@ services:
       - /docker/etc/autoremove-torrents_config/config.yml:/app/config.yml
       # Empty autoremove-torrents.log file must be created previously on host
       - /docker/tmp/autoremove-torrents_log/autoremove-torrents.log:/var/log/autoremove-torrents.log
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - TZ=${DOCKER_TZ}

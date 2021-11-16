@@ -1,4 +1,4 @@
-version: "2"
+version: "2.1"
 
 services:
   duplicati:
@@ -13,6 +13,8 @@ services:
       - /docker/etc/duplicati_config:/config:rw
       - /docker/backups:/backups:rw
       - /docker/etc:/source:ro
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      # Recommendation: Duplicati needs root user to get access to all files
+      - PUID=${DOCKER_ROOTPUID:-0}
+      - PGID=${DOCKER_ROOTPGID:-0}
+      - TZ=${DOCKER_TZ}

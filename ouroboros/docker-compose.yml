@@ -1,4 +1,4 @@
-version: "2"
+version: "2.1"
 
 services:
   ouroboros:
@@ -10,6 +10,15 @@ services:
     network_mode: host
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - TZ=${DOCKER_TZ}
+      - CLEANUP=${DOCKER_OUROBOROS_CLEANUP:-false}
+      - MONITOR=${DOCKER_OUROBOROS_MONITOR}
+      - IGNORE=${DOCKER_OUROBOROS_IGNORE}
+      # Notifications using apprise: https://github.com/pyouroboros/ouroboros/wiki/Notifications
+      - NOTIFIERS=${DOCKER_OUROBOROS_NOTIFIERS}
+      - LOG_LEVEL=${DOCKER_OUROBOROS_LOGLEVEL:-info}
+      # Interval not used if Run Once is setted to true. I use Ouroboros with an external cron.
+      - RUN_ONCE=${DOCKER_OUROBOROS_RUNONCE:-false}
+      - SKIP_STARTUP_NOTIFICATIONS=${DOCKER_OUROBOROS_SKIPSTARTUPNOTIFICATIONS:-true}
+      # More options and info in https://github.com/pyouroboros/ouroboros/wiki/Usage

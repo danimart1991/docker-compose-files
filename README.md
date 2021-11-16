@@ -8,7 +8,39 @@
 
 This repository is a collection of Docker-Compose files to deploy services easily.
 
-> All services must be configured before deployed modifing the `docker-compose.yml` and the `.env` files, and configured after deployed setting up the own service.
+## Deployment
+
+### Easy Mode
+
+- Copy the `docker-compose.yml` file.
+
+- Change the environment vars `${XXXXXX}` for your own. Example:
+
+  ```yaml
+  - TZ=${DOCKER_TZ}
+  to
+  - TZ=Europe/Madrid
+  ```
+
+- Modify the rest of the file with your own configuration.
+
+- Then, deploy the service with `docker-compose up -d`.
+
+### Hard Mode (WIP)
+
+- Copy the `docker-compose.yml`, `.env.template` and `export-env.sh` files.
+
+- Modify the `.env.template` removing all the keys/values not used in the `docker-compose.yml`.
+
+- Rename the `.env.template` to `.env`.
+
+- Run `$ . ./export-env.sh`.
+
+- Check that all the environment variables needed are set in current runtime using `$ env`.
+
+- Then, deploy the service with `docker-compose up -d`.
+
+> To migrate my repository to your environment, you could clone the repository and modify at your own, so you simply need to run `$ . ./export-env.sh` and then deploy the service you want navigating to its folder and running `docker-compose up -d`.
 
 ## Services
 

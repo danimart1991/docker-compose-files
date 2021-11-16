@@ -16,6 +16,7 @@ services:
       - /docker/tmp/sonarr_config:/config
       - /docker/etc/sonarr_backups:/config/Backups
       - /media/hdd2/downloads:/downloads
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - TZ=${DOCKER_TZ}
+      - PUID=${DOCKER_PUID:-1000}
+      - PGID=${DOCKER_PGID:-1000}

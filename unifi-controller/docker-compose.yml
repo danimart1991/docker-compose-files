@@ -19,6 +19,7 @@ services:
       - 5514:5514/udp #optional
     volumes:
       - /docker/etc/unifi-controller_config:/config
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - TZ=${DOCKER_TZ}
+      - PUID=${DOCKER_PUID:-1000}
+      - PGID=${DOCKER_PGID:-1000}

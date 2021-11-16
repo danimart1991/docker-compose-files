@@ -20,6 +20,7 @@ services:
       - /media/hdd2/downloads/airdcpp:/downloads
       - /media/hdd/movies:/movies
       - /media/hdd14tb/tv:/tv
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - PUID=${DOCKER_PUID:-1000}
+      - PGID=${DOCKER_PGID:-1000}
+      - TZ=${DOCKER_TZ}

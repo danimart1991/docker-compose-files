@@ -16,6 +16,11 @@ services:
       - /docker/etc/traefik_data:/etc/traefik
       # Must change logs folder. See tips in README.
       - /docker/tmp/traefik_log:/var/log/traefik
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - TZ=${DOCKER_TZ}
+      - AZURE_CLIENT_ID=${DOCKER_TRAEFIK_AZURECLIENTID}
+      - AZURE_CLIENT_SECRET=${DOCKER_TRAEFIK_AZURECLIENTSECRET}
+      - AZURE_ENVIRONMENT=${DOCKER_TRAEFIK_AZUREENVIRONMENT}
+      - AZURE_RESOURCE_GROUP=${DOCKER_TRAEFIK_AZURERESOURCEGROUP}
+      - AZURE_SUBSCRIPTION_ID=${DOCKER_TRAEFIK_AZURESUBSCRIPTIONID}
+      - AZURE_TENANT_ID=${DOCKER_TRAEFIK_AZURETENANTID}

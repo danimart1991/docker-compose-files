@@ -13,6 +13,5 @@ services:
       - /docker/tmp/home-assistant_tmp:/tmp
     restart: always
     network_mode: host
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - TZ=${DOCKER_TZ}

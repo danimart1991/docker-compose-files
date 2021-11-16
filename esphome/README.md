@@ -4,11 +4,19 @@
 
 ## Deployment
 
-- Create `.env` file based on `.env.template`.
-- Customize the environment if needed.
-- Setup secrets (`<secret>`) if any.
-- Modify the compose with your own configuration.
-- Deploy with `docker-compose up -d`.
+- Copy the `docker-compose.yml` file.
+
+- Change the environment vars `${XXXXXX}` for your own. Example:
+
+  ```yaml
+  - TZ=${DOCKER_TZ}
+  to
+  - TZ=Europe/Madrid
+  ```
+
+- Modify the rest of the file with your own configuration.
+
+- Then, deploy the service with `docker-compose up -d`.
 
 ## Tips
 

@@ -15,6 +15,7 @@ services:
       - /docker/etc/jackett_config:/config
       # Comment to use original .yaml definitions
       - /docker/etc/jackett_definitions:/app/Definitions
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - PUID=${DOCKER_PUID:-1000}
+      - PGID=${DOCKER_PGID:-1000}
+      - TZ=${DOCKER_TZ}

@@ -8,6 +8,7 @@
 !docker-compose.yml
 !.env.template
 !README.md
+!export-env.sh
 !.gitignore
 !.github/*
 !LICENSE

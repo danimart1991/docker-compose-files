@@ -1,4 +1,4 @@
-version: "2"
+version: "2.1"
 
 services:
   esphome:
@@ -14,6 +14,10 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /docker/tmp/esphome_config:/config:rw
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      # Use ICMP pings to check the status of the device if mDNS to show online/offline state in the dashboard fails
+      # https://github.com/esphome/issues/issues/641#issuecomment-534156628
+      - ESPHOME_DASHBOARD_USE_PING=${DOCKER_ESPHOME_DASHBOARDUSEPING:-false}
+      - USERNAME=${DOCKER_ESPHOME_USERNAME}
+      - PASSWORD=${DOCKER_ESPHOME_PASSWORD}
+      - TZ=${DOCKER_TZ}

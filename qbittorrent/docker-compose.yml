@@ -15,6 +15,9 @@ services:
     volumes:
       - /docker/etc/qbittorrent_config:/config
       - /media/hdd2/downloads:/downloads
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - TZ=${DOCKER_TZ}
+      - PUID=${DOCKER_PUID:-1000}
+      - PGID=${DOCKER_PGID:-1000}
+      # optional. Only set if you don't want to use the default port 8080.
+      - WEBUI_PORT=${DOCKER_QBITTORRENT_WEBUIPORT:-8085}

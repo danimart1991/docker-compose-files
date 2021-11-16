@@ -13,6 +13,5 @@ services:
       - /docker/etc/adguardhome_config:/opt/adguardhome/conf
       # Depends on Traextor container for DNSSEC/SSL certificates
       - /docker/tmp/traextor_certs:/opt/adguardhome/certs
-    env_file:
-      - ../.env
-      - ./.env
+    environment:
+      - TZ=${DOCKER_TZ}
