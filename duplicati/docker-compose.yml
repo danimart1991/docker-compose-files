@@ -2,19 +2,18 @@ version: "2.1"
 
 services:
   duplicati:
-    image: ghcr.io/linuxserver/duplicati:latest
+    image: duplicati/duplicati:latest
     container_name: duplicati
     hostname: duplicati
     restart: always
+    # Recommendation: Duplicati needs root user to get access to all files
+    user: "${DOCKER_ROOTPUID:-0}:${DOCKER_ROOTPGID:-0}"
     network_mode: bridge
     ports:
       - 8200:8200
     volumes:
-      - /docker/etc/duplicati_config:/config:rw
+      - /docker/etc/duplicati_data:/data:rw
       - /docker/backups:/backups:rw
       - /docker/etc:/source:ro
     environment:
-      # Recommendation: Duplicati needs root user to get access to all files
-      - PUID=${DOCKER_ROOTPUID:-0}
-      - PGID=${DOCKER_ROOTPGID:-0}
       - TZ=${DOCKER_TZ}
