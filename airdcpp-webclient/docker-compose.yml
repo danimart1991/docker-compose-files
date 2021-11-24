@@ -13,13 +13,13 @@ services:
       - 21249:21249/tcp
       - 5600:5600/tcp
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/airdcpp-webclient_data:/airdcpp-webclient/config
+      - ${DOCKER_PATH_PERSISTENT}/airdcpp-webclient_data:/airdcpp-webclient/config:rw
       # Must change default logs folder. See tips in README.
-      - ${DOCKER_PATH_TEMPORARY}/airdcpp-webclient_logs:/airdcpp-webclient/logs
+      - ${DOCKER_PATH_TEMPORARY}/airdcpp-webclient_logs:/airdcpp-webclient/logs:rw
       # Must change default downloads folder to /downloads.
-      - ${DOCKER_PATH_DOWNLOADS}/airdcpp:/downloads
-      - ${DOCKER_PATH_MOVIES}:/movies
-      - ${DOCKER_PATH_TV}:/tv
+      - ${DOCKER_PATH_DOWNLOADS}/airdcpp:/downloads:rw
+      - ${DOCKER_PATH_MOVIES}:/movies:rw
+      - ${DOCKER_PATH_TV}:/tv:rw
     environment:
       - PUID=${DOCKER_PUID:-1000}
       - PGID=${DOCKER_PGID:-1000}

@@ -13,10 +13,10 @@ services:
       - 1900:1900/udp # optional. Used for service auto-discovery
       - 7359:7359/udp # optional. Used for client auto-discovery
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/jellyfin_config:/config
-      - ${DOCKER_PATH_TEMPORARY}/jellyfin_cache:/cache
-      - ${DOCKER_PATH_MOVIES}:/media/movies
-      - ${DOCKER_PATH_TV}:/media/tv
+      - ${DOCKER_PATH_PERSISTENT}/jellyfin_config:/config:rw
+      - ${DOCKER_PATH_TEMPORARY}/jellyfin_cache:/cache:rw
+      - ${DOCKER_PATH_MOVIES}:/media/movies:ro
+      - ${DOCKER_PATH_TV}:/media/tv:ro
     # optional. Transcoding using VAAPI (https://jellyfin.org/docs/general/server/transcoding.html)
     devices:
       - /dev/dri/card0:/dev/dri/card0

@@ -8,8 +8,8 @@ services:
     restart: always
     network_mode: host
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/jackett2telegram_config:/app/config
-      - ${DOCKER_PATH_DOWNLOADS}/blackhole:/app/blackhole
+      - ${DOCKER_PATH_PERSISTENT}/jackett2telegram_config:/app/config:rw
+      - ${DOCKER_PATH_DOWNLOADS}/blackhole:/app/blackhole:rw
     environment:
       - CHATID=${DOCKER_JACKETT2TELEGRAM_CHATID}
       - TOKEN=${DOCKER_JACKETT2TELEGRAM_TOKEN}

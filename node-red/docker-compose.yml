@@ -13,8 +13,8 @@ services:
     group_add:
       - ${DOCKER_GID:-998}
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/node-red_data:/data
+      - ${DOCKER_PATH_PERSISTENT}/node-red_data:/data:rw
       # Needed to work with Docker Containers inside Node-RED
-      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock:rw
     environment:
       - TZ=${DOCKER_TZ}

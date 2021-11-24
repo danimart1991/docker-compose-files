@@ -8,8 +8,8 @@ services:
     restart: always
     network_mode: bridge
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/autoremove-torrents_config/config.yml:/app/config.yml
+      - ${DOCKER_PATH_PERSISTENT}/autoremove-torrents_config/config.yml:/app/config.yml:ro
       # Empty autoremove-torrents.log file must be created previously on host
-      - ${DOCKER_PATH_TEMPORARY}/autoremove-torrents_log/autoremove-torrents.log:/var/log/autoremove-torrents.log
+      - ${DOCKER_PATH_TEMPORARY}/autoremove-torrents_log/autoremove-torrents.log:/var/log/autoremove-torrents.log:rw
     environment:
       - TZ=${DOCKER_TZ}

@@ -13,8 +13,8 @@ services:
       - 6881:6881/tcp
       - 8085:8085/tcp
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/qbittorrent_config:/config
-      - ${DOCKER_PATH_DOWNLOADS}:/downloads
+      - ${DOCKER_PATH_PERSISTENT}/qbittorrent_config:/config:rw
+      - ${DOCKER_PATH_DOWNLOADS}:/downloads:rw
     environment:
       - TZ=${DOCKER_TZ}
       - PUID=${DOCKER_PUID:-1000}
