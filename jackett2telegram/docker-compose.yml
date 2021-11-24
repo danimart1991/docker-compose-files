@@ -6,7 +6,7 @@ services:
     container_name: jackett2telegram
     hostname: jackett2telegram
     restart: always
-    network_mode: host
+    network_mode: bridge
     volumes:
       - ${DOCKER_PATH_PERSISTENT}/jackett2telegram_config:/app/config:rw
       - ${DOCKER_PATH_DOWNLOADS}/blackhole:/app/blackhole:rw

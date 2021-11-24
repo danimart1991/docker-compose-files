@@ -6,7 +6,7 @@ services:
     container_name: traextor
     hostname: traextor
     restart: always
-    network_mode: host
+    network_mode: bridge
     volumes:
       - /var/run/docker.socket:/var/run/docker.socket:ro
       - ${DOCKER_PATH_TEMPORARY}/traextor_certs:/certs:rw
