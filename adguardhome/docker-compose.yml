@@ -7,7 +7,28 @@ services:
     hostname: adguardhome
     command: --no-check-update -c /opt/adguardhome/conf/AdGuardHome.yaml -w /opt/adguardhome/work
     restart: always
-    network_mode: host
+    network_mode: bridge
+    ports:
+      - 3000:3000/tcp
+      # Plain DNS
+      - 53:53/tcp
+      - 53:53/udp
+      # Optional. To use AdGuard as DHCP server.
+      #- 67:67/udp
+      #- 68:68/tcp
+      #- 68:68/udp
+      # Optional. To use AdGuard as HTTPS/DNS-over-HTTPS server.
+      #- 443:443/tcp
+      #- 443:443/udp
+      # Optional. To use AdGuard as DNS-over-TLS server.
+      - 853:853/tcp
+      # Optional. To use AdGuard as DNS-over-QUIC server. You may only leave one or two of these.
+      #- 784:784/udp
+      #- 853:853/udp
+      #- 8853:8853/udp
+      # Optional. To use AdGuard as DNSCrypt server.
+      #- 5443:5443/tcp
+      #- 5443:5443/udp
     volumes:
       - ${DOCKER_PATH_TEMPORARY}/adguardhome_work:/opt/adguardhome/work:rw
       - ${DOCKER_PATH_PERSISTENT}/adguardhome_config:/opt/adguardhome/conf:rw
