@@ -12,9 +12,9 @@ services:
     ports:
       - 9117:9117/tcp
     volumes:
-      - /docker/etc/jackett_config:/config
+      - ${DOCKER_PATH_PERSISTENT}/jackett_config:/config
       # Comment to use original .yaml definitions
-      - /docker/etc/jackett_definitions:/app/Definitions
+      - ${DOCKER_PATH_PERSISTENT}/jackett_definitions:/app/Definitions
     environment:
       - PUID=${DOCKER_PUID:-1000}
       - PGID=${DOCKER_PGID:-1000}

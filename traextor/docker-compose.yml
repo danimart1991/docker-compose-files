@@ -9,9 +9,9 @@ services:
     network_mode: host
     volumes:
       - /var/run/docker.socket:/var/run/docker.socket
-      - /docker/tmp/traextor_certs:/certs
+      - ${DOCKER_PATH_TEMPORARY}/traextor_certs:/certs
       # Depends on Traefik container for DNSSEC/SSL certificates
-      - /docker/etc/traefik_data:/acme
+      - ${DOCKER_PATH_PERSISTENT}/traefik_data:/acme
     environment:
       - TZ=${DOCKER_TZ}
       - ACME_FILE=${DOCKER_TRAEXTOR_ACMEFILE}

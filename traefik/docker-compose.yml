@@ -13,9 +13,9 @@ services:
       - 8081:8080/tcp
     volumes:
       - /var/run/docker.socket:/var/run/docker.socket:ro
-      - /docker/etc/traefik_data:/etc/traefik
+      - ${DOCKER_PATH_PERSISTENT}/traefik_data:/etc/traefik
       # Must change logs folder. See tips in README.
-      - /docker/tmp/traefik_log:/var/log/traefik
+      - ${DOCKER_PATH_TEMPORARY}/traefik_log:/var/log/traefik
     environment:
       - TZ=${DOCKER_TZ}
       - AZURE_CLIENT_ID=${DOCKER_TRAEFIK_AZURECLIENTID}

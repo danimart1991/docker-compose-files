@@ -12,10 +12,10 @@ services:
     ports:
       - 8989:8989/tcp
     volumes:
-      - /media/hdd14tb/tv:/tv
-      - /docker/tmp/sonarr_config:/config
-      - /docker/etc/sonarr_backups:/config/Backups
-      - /media/hdd2/downloads:/downloads
+      - ${DOCKER_PATH_TV}:/tv
+      - ${DOCKER_PATH_TEMPORARY}/sonarr_config:/config
+      - ${DOCKER_PATH_PERSISTENT}/sonarr_backups:/config/Backups
+      - ${DOCKER_PATH_DOWNLOADS}:/downloads
     environment:
       - TZ=${DOCKER_TZ}
       - PUID=${DOCKER_PUID:-1000}

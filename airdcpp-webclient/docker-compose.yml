@@ -13,13 +13,13 @@ services:
       - 21249:21249/tcp
       - 5600:5600/tcp
     volumes:
-      - /docker/etc/airdcpp-webclient_data:/airdcpp-webclient/config
+      - ${DOCKER_PATH_PERSISTENT}/airdcpp-webclient_data:/airdcpp-webclient/config
       # Must change default logs folder. See tips in README.
-      - /docker/tmp/airdcpp-webclient_logs:/airdcpp-webclient/logs
+      - ${DOCKER_PATH_TEMPORARY}/airdcpp-webclient_logs:/airdcpp-webclient/logs
       # Must change default downloads folder to /downloads.
-      - /media/hdd2/downloads/airdcpp:/downloads
-      - /media/hdd/movies:/movies
-      - /media/hdd14tb/tv:/tv
+      - ${DOCKER_PATH_DOWNLOADS}/airdcpp:/downloads
+      - ${DOCKER_PATH_MOVIES}:/movies
+      - ${DOCKER_PATH_TV}:/tv
     environment:
       - PUID=${DOCKER_PUID:-1000}
       - PGID=${DOCKER_PGID:-1000}

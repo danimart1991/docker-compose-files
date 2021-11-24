@@ -12,10 +12,10 @@ services:
     ports:
       - 7878:7878/tcp
     volumes:
-      - /media/hdd/movies:/movies
-      - /docker/tmp/radarr_config:/config
-      - /docker/etc/radarr_backups:/config/Backups
-      - /media/hdd2/downloads:/downloads
+      - ${DOCKER_PATH_MOVIES}:/movies
+      - ${DOCKER_PATH_TEMPORARY}/radarr_config:/config
+      - ${DOCKER_PATH_PERSISTENT}/radarr_backups:/config/Backups
+      - ${DOCKER_PATH_DOWNLOADS}:/downloads
     environment:
       - TZ=${DOCKER_TZ}
       - PUID=${DOCKER_PUID:-1000}

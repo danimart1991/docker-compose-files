@@ -12,8 +12,8 @@ services:
     ports:
       - 8200:8200
     volumes:
-      - /docker/etc/duplicati_data:/data:rw
+      - ${DOCKER_PATH_PERSISTENT}/duplicati_data:/data:rw
       - /docker/backups:/backups:rw
-      - /docker/etc:/source:ro
+      - ${DOCKER_PATH_PERSISTENT}:/source:ro
     environment:
       - TZ=${DOCKER_TZ}
