@@ -9,12 +9,12 @@ services:
     network_mode: bridge
     ports:
       - 1880:1880/tcp
-    # Needed to use palette node-red-contrib-dockerode
+    # Needed to work with Docker Containers inside Node-RED
     group_add:
       - ${DOCKER_GID:-998}
     volumes:
       - /docker/etc/node-red_data:/data
-      # Volume needed to use palette node-red-contrib-dockerode
+      # Needed to work with Docker Containers inside Node-RED
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - TZ=${DOCKER_TZ}

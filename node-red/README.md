@@ -22,4 +22,4 @@ It provides a browser-based editor that makes it easy to wire together flows usi
 
 ## Tips
 
-- Property `group_add` and volume `/var/run/docker.sock` are necessary if you want to control _Docker Containers_ inside _Node-RED_ using the module [`node-red-contrib-dockerode`](https://flows.nodered.org/node/node-red-contrib-dockerode). You could obtain the `group_add` value using the command `grep /etc/group -e "docker"`.
+- Property `group_add` and volume `/var/run/docker.sock` are necessary if you want to control _Docker Containers_ inside _Node-RED_. You could obtain the `group_add` value using the command `grep /etc/group -e "docker"`.
