@@ -52,6 +52,10 @@ Sorted alphabetically
 - [AirDC++ Web Client](https://airdcpp-web.github.io/)
 - [Auto Remove Torrents](https://github.com/jerrymakesjelly/autoremove-torrents)
 
+### C
+
+- [Checkmk (Raw Edition)](https://checkmk.com/product/raw-edition)
+
 ## D
 
 - [Duplicati](https://www.duplicati.com/)

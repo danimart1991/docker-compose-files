@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  checkmk-raw:
+    image: checkmk/check-mk-raw:2.0.0-latest
+    container_name: checkmk-raw
+    hostname: checkmk-raw
+    restart: always
+    network_mode: bridge
+    ports:
+      - 5000:5000
+    tmpfs:
+      - /opt/omd/sites/cmk/tmp:uid=1000,gid=1000
+    ulimits:
+      nofile: 1024
+    volumes:
+      - ${DOCKER_PATH_PERSISTENT}/checkmk-raw_data:/omd/sites:rw
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - TZ=${DOCKER_TZ}
