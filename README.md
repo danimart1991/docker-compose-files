@@ -6,7 +6,17 @@
 
 # Docker-Compose Files
 
-This repository is a collection of Docker-Compose files to deploy services easily.
+This repository is a collection of my Docker-Compose files with which I easily deploy services on my server.
+
+## Related
+
+Here are some related post in my blog:
+
+- [Install Docker & Portainer in Debian](https://www.danielmartingonzalez.com/en/docker-and-portainer-in-debian/)
+- [Update the Portainer container](https://www.danielmartingonzalez.com/en/update-the-portainer-container/)
+- [Automatically update containers](https://www.danielmartingonzalez.com/en/automatically-update-containers/)
+- [Online file browser for your server](https://www.danielmartingonzalez.com/en/online-file-browser-for-your-server/)
+- [Backups towards Docker](https://www.danielmartingonzalez.com/en/backups-towards-docker/)
 
 ## Deployment
 
@@ -56,57 +66,57 @@ Sorted alphabetically
 
 - [Checkmk (Raw Edition)](https://checkmk.com/product/raw-edition)
 
-## D
+### D
 
 - [Duplicati](https://www.duplicati.com/)
 
-## E
+### E
 
 - [ESPHome](https://esphome.io/)
 
-## F
+### F
 
 - [File Browser](https://filebrowser.org/)
 
-## H
+### H
 
 - [Home Assistant](https://www.home-assistant.io/)
 
-## J
+### J
 
 - [Jackett](https://github.com/Jackett/Jackett)
 - [Jackett2Telegram (Jackett RSS to Telegram Bot)](https://github.com/danimart1991/jackett2telegram)
 - [Jellyfin](https://jellyfin.org/)
 
-## N
+### N
 
 - [Node-RED](https://nodered.org/)
 
-## O
+### O
 
 - [Ouroboros](https://github.com/pyouroboros/ouroboros)
 
-## P
+### P
 
 - [Portainer](https://www.portainer.io/)
 
-## Q
+### Q
 
 - [qBittorrent](https://www.qbittorrent.org/)
 
-## R
+### R
 
 - [Radarr](https://radarr.video/)
 
-## S
+### S
 
 - [Sonarr](https://sonarr.tv/)
 
-## T
+### T
 
 - [Traefik](https://traefik.io/traefik/)
 - [Traextor](https://gitlab.com/dj_arbz/traextor)
 
-## U
+### U
 
 - [Unifi Controller](https://www.ubnt.com/enterprise/#unifi)
