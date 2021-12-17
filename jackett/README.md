@@ -1,6 +1,8 @@
 # Jackett
 
-[Jackett](https://github.com/jackett/jackett) works as a proxy server: it translates queries from apps (*Sonarr*, *Radarr*, *SickRage*, *CouchPotato*, *Mylar*, *Lidarr*, *DuckieTV*, *qBittorrent*, *Nefarious* etc.) into tracker-site-specific http queries, parses the html response, then sends results back to the requesting software. This allows for getting recent uploads (like *RSS*) and performing searches. *Jackett* is a single repository of maintained indexer scraping & translation logic - removing the burden from other apps.
+[Jackett](https://github.com/jackett/jackett) works as a proxy server: it translates queries from apps (_Sonarr_, _Radarr_, _SickRage_, _CouchPotato_, _Mylar_, _Lidarr_, _DuckieTV_, _qBittorrent_, _Nefarious_ etc.) into tracker-site-specific http queries, parses the html response, then sends results back to the requesting software. This allows for getting recent uploads (like _RSS_) and performing searches. _Jackett_ is a single repository of maintained indexer scraping & translation logic - removing the burden from other apps.
+
+> Container image powered by [hotio](https://hotio.dev/).
 
 ## Deployment
 

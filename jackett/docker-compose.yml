@@ -2,7 +2,7 @@ version: "2.1"
 
 services:
   jackett:
-    image: ghcr.io/hotio/jackett:latest
+    image: cr.hotio.dev/hotio/jackett:latest
     container_name: jackett
     hostname: jackett
     restart: always
