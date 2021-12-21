@@ -22,7 +22,7 @@
 
 - By default, _File Browser_ already have a configuration file with some defaults so you can just mount the root and the database. Although you can overwrite by mounting a directory to with a new config file.
 
-- Generic `filebrowser.json` config:
+- Generic `settings.json` config:
 
   ```json
   {
@@ -30,12 +30,10 @@
     "baseURL": "",
     "address": "",
     "log": "stdout",
-    "database": "/database.db",
+    "database": "/database/filebrowser.db",
     "root": "/srv"
   }
   ```
-
-- If you don't already have a database, make sure to create a new empty file under the path you specified. Otherwise, Docker will create an empty folder instead of an empty file, resulting in an error when mounting the database into the container.
 
 - Default user:
 
