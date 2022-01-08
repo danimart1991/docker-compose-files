@@ -17,7 +17,7 @@ services:
       # Must change default logs folder. See tips in README.
       - ${DOCKER_PATH_TEMPORARY}/airdcpp-webclient_logs:/airdcpp-webclient/logs:rw
       # Must change default downloads folder to /downloads.
-      - ${DOCKER_PATH_DOWNLOADS}/airdcpp:/downloads:rw
+      - ${DOCKER_PATH_DOWNLOADS}:/downloads:rw
       - ${DOCKER_PATH_MOVIES}:/movies:rw
       - ${DOCKER_PATH_TV}:/tv:rw
     environment:
