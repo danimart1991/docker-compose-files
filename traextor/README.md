@@ -1,6 +1,6 @@
 # Traextor
 
-[Traextor](https://gitlab.com/dj_arbz/traextor) is an `ACME.json` extractor for *Traefik*. This docker image will watch a given `acme.json` file and export all certificates to `.pem` and `.key` files for use in external applications.
+[Traextor](https://gitlab.com/dj_arbz/traextor) is an `ACME.json` extractor for _Traefik_. This docker image will watch a given `acme.json` file and export all certificates to `.pem` and `.key` files for use in external applications.
 
 ## Deployment
 

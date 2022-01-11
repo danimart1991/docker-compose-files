@@ -28,4 +28,4 @@ qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.
 
 - `PGID` and `PUID` environment variables obtained from main .env using the commands `id -g` and `echo ${UID}` respectively. [More info in Linux Server docs](https://docs.linuxserver.io/images/docker-qbittorrent#user-group-identifiers).
 - Default username/password is `admin/adminadmin`
-- Due to issues with *CSRF* and port mapping, should you require to alter the port for the webui you need to change both sides of the `-p 8080` switch AND set the `WEBUI_PORT` variable to the new port. For example, to set the port to `8090` you need to set `-p 8090:8090` and `-e WEBUI_PORT=8090`.
+- Due to issues with _CSRF_ and port mapping, should you require to alter the port for the webui you need to change both sides of the `-p 8080` switch AND set the `WEBUI_PORT` variable to the new port. For example, to set the port to `8090` you need to set `-p 8090:8090` and `-e WEBUI_PORT=8090`.
