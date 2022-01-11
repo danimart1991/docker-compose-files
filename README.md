@@ -99,6 +99,7 @@ Sorted alphabetically
 ### P
 
 - [Portainer](https://www.portainer.io/)
+- [Prowlarr](https://prowlarr.com/)
 
 ### Q
 
@@ -114,6 +115,7 @@ Sorted alphabetically
 
 ### T
 
+- [docker-tizen-webos-sdk](https://github.com/vitalets/docker-tizen-webos-sdk)
 - [Traefik](https://traefik.io/traefik/)
 - [Traextor](https://gitlab.com/dj_arbz/traextor)
 
