@@ -12,7 +12,7 @@ services:
       - 80:80/tcp
       - 8081:8080/tcp
     volumes:
-      - /var/run/docker.socket:/var/run/docker.socket:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
       - ${DOCKER_PATH_PERSISTENT}/traefik_data:/etc/traefik:rw
       # Must change logs folder. See tips in README.
       - ${DOCKER_PATH_TEMPORARY}/traefik_log:/var/log/traefik:rw
