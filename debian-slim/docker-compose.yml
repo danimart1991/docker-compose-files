@@ -1,0 +1,29 @@
+version: "2"
+
+services:
+  debian-base:
+    image: debian:11-slim
+    container_name: debian
+    hostname: debian
+    restart: "no"
+    network_mode: bridge
+    privileged: true
+    volumes:
+      - /bin/systemctl:/bin/systemctl
+      - /run/systemd/system:/run/systemd/system
+      - /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket
+      - /sys/fs/cgroup:/sys/fs/cgroup
+    environment:
+      - TZ=${DOCKER_TZ}
+
+  debian-reboot:
+    container_name: debian-reboot
+    extends:
+      service: debian-base
+    command: systemctl reboot
+
+  debian-shutdown:
+    container_name: debian-shutdown
+    extends:
+      service: debian-base
+    command: systemctl shutdown

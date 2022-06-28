@@ -72,6 +72,7 @@ Sorted alphabetically
 
 ### D
 
+- [Debian Slim](https://hub.docker.com/_/debian)
 - [Duplicati](https://www.duplicati.com/)
 
 ### E
