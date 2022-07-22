@@ -21,3 +21,5 @@ services:
       - PGID=${DOCKER_PGID:-1000}
       # optional. Only set if you don't want to use the default port 8080.
       - WEBUI_PORT=${DOCKER_QBITTORRENT_WEBUIPORT:-8085}
+      # optional. Themes
+      - DOCKER_MODS=ghcr.io/gilbn/theme.park:qbittorrent
