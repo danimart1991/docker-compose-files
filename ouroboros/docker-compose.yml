@@ -5,7 +5,7 @@ services:
     image: pyouroboros/ouroboros:latest
     container_name: ouroboros
     hostname: ouroboros
-    # Need if RUN_ONCE=true
+    # Must be "no" if RUN_ONCE=true
     restart: "no"
     network_mode: bridge
     volumes:
