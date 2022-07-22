@@ -2,7 +2,7 @@ version: "2.1"
 
 services:
   node-red:
-    image: nodered/node-red:latest-12
+    image: nodered/node-red:latest
     container_name: node-red
     hostname: node-red
     restart: always
