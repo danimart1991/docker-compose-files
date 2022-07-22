@@ -14,6 +14,6 @@ services:
       - ${DOCKER_PATH_PERSISTENT}/traefik_data:/acme:ro
     environment:
       - TZ=${DOCKER_TZ}
-      - ACME_FILE=${DOCKER_TRAEXTOR_ACMEFILE}
-      - CERT_PATH=${DOCKER_TRAEXTOR_CERTPATH}
-      - OUTPUT_DIR=${DOCKER_TRAEXTOR_OUTPUTDIR}
+      - ACME_FILE=/acme/acme.json
+      - CERT_PATH=/certs
+      - OUTPUT_DIR=/certs
