@@ -18,6 +18,7 @@ services:
       - ${DOCKER_PATH_TEMPORARY}/traefik_log:/var/log/traefik:rw
     environment:
       - TZ=${DOCKER_TZ}
+      # Optional: Environments to configure with Azure DNS
       - AZURE_CLIENT_ID=${DOCKER_TRAEFIK_AZURECLIENTID}
       - AZURE_CLIENT_SECRET=${DOCKER_TRAEFIK_AZURECLIENTSECRET}
       - AZURE_ENVIRONMENT=${DOCKER_TRAEFIK_AZUREENVIRONMENT}
