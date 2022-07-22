@@ -21,3 +21,4 @@
 ## Tips
 
 - To bind mount a specific folder for logs, in addition to add the volume (see `docker-compose.yml` file), you must change the default folder in `AirDC++ Settings -> System -> Logs` to `/airdcpp-webclient/logs/`.
+- To bind mount a specific folder for downloads, in addition to add the volume (see `docker-compose.yml` file), you must change the default folder in `AirDC++ Settings -> Downloads -> Locations` to `/downloads/`.
