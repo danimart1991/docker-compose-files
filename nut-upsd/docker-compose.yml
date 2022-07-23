@@ -1,0 +1,23 @@
+version: "2"
+
+services:
+  nut-upsd:
+    image: upshift/nut-upsd:latest
+    container_name: nut-upsd
+    hostname: nut-upsd
+    restart: always
+    network_mode: bridge
+    ports:
+      - 3493:3493/tcp
+    devices:
+      - /dev/bus/usb/002/002:/dev/bus/usb/002/002
+    environment:
+      - API_USER=${DOCKER_NUT-UPSD_API_USER}
+      - API_PASSWORD=${DOCKER_NUT-UPSD_API_PASSWORD}
+      - ADMIN_PASSWORD=${DOCKER_NUT-UPSD_ADMIN_PASSWORD}
+      - UPS_NAME=${DOCKER_NUT-UPSD_UPS_NAME}
+      - UPS_DESC=${DOCKER_NUT-UPSD_UPS_DESC}
+      - UPS_DRIVER=${DOCKER_NUT-UPSD_UPS_DRIVER}
+      - UPS_PORT=${DOCKER_NUT-UPSD_UPS_PORT}
+      - SHUTDOWN_CMD=${DOCKER_NUT-UPSD_SHUTDOWN_CMD}
+      - TZ=${DOCKER_TZ}

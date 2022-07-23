@@ -95,6 +95,7 @@ Sorted alphabetically
 
 ### N
 
+- [Network UPS Tools Server](https://networkupstools.org/)
 - [Node-RED](https://nodered.org/)
 
 ### O
