@@ -12,7 +12,8 @@ services:
     ports:
       - 6767:6767/tcp
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/bazarr_config:/config:rw
+      - ${DOCKER_PATH_TEMPORARY}/bazarr_config:/config:rw      
+      - ${DOCKER_PATH_PERSISTENT}/bazarr_backups:/config/backup:rw
       - ${DOCKER_PATH_MOVIES}:/movies:rw
       - ${DOCKER_PATH_TV}:/tv:rw
     environment:
