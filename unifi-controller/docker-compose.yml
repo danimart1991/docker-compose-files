@@ -2,7 +2,7 @@ version: "2.1"
 
 services:
   unifi-controller:
-    image: ghcr.io/linuxserver/unifi-controller
+    image: lscr.io/linuxserver/unifi-controller
     container_name: unifi-controller
     hostname: unifi-controller
     restart: always
