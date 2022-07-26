@@ -2,7 +2,7 @@ version: "2.1"
 
 services:
   radarr:
-    image: ghcr.io/danimart1991/radarr:latest
+    image: danimart1991/radarr:latest
     container_name: radarr
     hostname: radarr
     restart: always
