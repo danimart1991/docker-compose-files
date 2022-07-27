@@ -1,11 +1,6 @@
 #!/bin/sh
 
-## Usage:
-##   . ./export-env.sh
+# Export env vars from .env file.
+# Usage: $ . ./export-env.sh
 
-unamestr=$(uname)
-if [ "$unamestr" = 'Linux' ]; then
-  export $(grep -v '^#' .env | xargs -d '\n')
-elif [ "$unamestr" = 'FreeBSD' ]; then
-  export $(grep -v '^#' .env | xargs -0)
-fi
+export $(grep -v '^#' .env | cut -d= -f1)
