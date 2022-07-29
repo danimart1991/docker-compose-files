@@ -1,6 +1,8 @@
 #!/bin/sh
 
-# Export env vars from .env file.
+# Export environment variables from .env file.
 # Usage: $ . ./export-env.sh
 
-export $(grep -v '^#' .env | cut -d= -f1)
+set -a
+source <(cat .env | sed -e '/^#/d;/^\s*$/d' -e "s/'/'\\\''/g" -e "s/=\(.*\)/='\1'/g")
+set +a
