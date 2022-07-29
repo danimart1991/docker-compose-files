@@ -3,7 +3,7 @@ version: "2.1"
 services:
   jackett:
     image: cr.hotio.dev/hotio/jackett:latest
-    container_name: jackett
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}jackett
     hostname: jackett
     restart: always
     healthcheck:

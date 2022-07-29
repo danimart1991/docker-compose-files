@@ -3,7 +3,7 @@ version: "2"
 services:
   debian-base:
     image: debian:11-slim
-    container_name: debian
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}debian
     hostname: debian
     restart: "no"
     network_mode: bridge
@@ -17,13 +17,13 @@ services:
       - TZ=${DOCKER_TZ}
 
   debian-reboot:
-    container_name: debian-reboot
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}debian-reboot
     extends:
       service: debian-base
     command: systemctl reboot
 
   debian-shutdown:
-    container_name: debian-shutdown
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}debian-shutdown
     extends:
       service: debian-base
     command: systemctl shutdown

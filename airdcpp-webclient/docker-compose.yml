@@ -3,7 +3,7 @@ version: "2.1"
 services:
   airdcpp-webclient:
     image: gangefors/airdcpp-webclient:latest
-    container_name: airdcpp-webclient
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}airdcpp-webclient
     hostname: airdcpp-webclient
     restart: always
     network_mode: bridge

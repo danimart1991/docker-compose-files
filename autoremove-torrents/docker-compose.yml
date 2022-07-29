@@ -3,7 +3,7 @@ version: "2"
 services:
   autoremove-torrents:
     image: dantebarba/autoremove-torrents:1.7.1
-    container_name: autoremove-torrents
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}autoremove-torrents
     hostname: autoremove-torrents
     restart: always
     network_mode: bridge

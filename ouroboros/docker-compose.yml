@@ -3,7 +3,7 @@ version: "2.1"
 services:
   ouroboros:
     image: pyouroboros/ouroboros:latest
-    container_name: ouroboros
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}ouroboros
     hostname: ouroboros
     # Must be "no" if RUN_ONCE=true
     restart: "no"

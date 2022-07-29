@@ -3,7 +3,7 @@ version: "2"
 services:
   nut-upsd:
     image: upshift/nut-upsd:latest
-    container_name: nut-upsd
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}nut-upsd
     hostname: nut-upsd
     restart: always
     network_mode: bridge

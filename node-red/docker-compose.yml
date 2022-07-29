@@ -3,7 +3,7 @@ version: "2.1"
 services:
   node-red:
     image: nodered/node-red:latest
-    container_name: node-red
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}node-red
     hostname: node-red
     restart: always
     network_mode: bridge

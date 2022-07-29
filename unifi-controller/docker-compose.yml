@@ -3,7 +3,7 @@ version: "2.1"
 services:
   unifi-controller:
     image: lscr.io/linuxserver/unifi-controller
-    container_name: unifi-controller
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}unifi-controller
     hostname: unifi-controller
     restart: always
     network_mode: bridge

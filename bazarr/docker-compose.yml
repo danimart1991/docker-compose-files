@@ -3,7 +3,7 @@ version: "2.1"
 services:
   bazarr:
     image: cr.hotio.dev/hotio/bazarr:latest
-    container_name: bazarr
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}bazarr
     hostname: bazarr
     restart: always
     healthcheck:

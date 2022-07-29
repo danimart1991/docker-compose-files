@@ -3,7 +3,7 @@ version: "2.1"
 services:
   portainer:
     image: portainer/portainer-ce:latest
-    container_name: portainer
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}portainer
     hostname: portainer
     command: -H unix:///var/run/docker.sock
     restart: always

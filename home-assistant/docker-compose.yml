@@ -3,7 +3,7 @@ version: "2.1"
 services:
   home-assistant:
     image: homeassistant/home-assistant:stable
-    container_name: home-assistant
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}home-assistant
     hostname: home-assistant
     healthcheck:
       test: "curl -Lf http://localhost:8123 || exit 1"

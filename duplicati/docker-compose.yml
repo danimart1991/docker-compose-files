@@ -3,7 +3,7 @@ version: "2.1"
 services:
   duplicati:
     image: duplicati/duplicati:latest
-    container_name: duplicati
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}duplicati
     hostname: duplicati
     restart: always
     # Recommendation: Duplicati needs root user to get access to all files

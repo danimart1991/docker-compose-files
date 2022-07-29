@@ -3,7 +3,7 @@ version: "2.1"
 services:
   jackett2telegram:
     image: danimart1991/jackett2telegram:latest
-    container_name: jackett2telegram
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}jackett2telegram
     hostname: jackett2telegram
     restart: always
     network_mode: bridge

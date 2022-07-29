@@ -3,7 +3,7 @@ version: "2"
 services:
   traextor:
     image: djarbz/traextor:latest
-    container_name: traextor
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}traextor
     hostname: traextor
     restart: always
     network_mode: bridge

@@ -3,7 +3,7 @@ version: "2.1"
 services:
   qbittorrent:
     image: lscr.io/linuxserver/qbittorrent:latest
-    container_name: qbittorrent
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}qbittorrent
     hostname: qbittorrent
     healthcheck:
       test: "curl -Lf http://localhost:8085"

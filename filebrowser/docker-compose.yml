@@ -3,7 +3,7 @@ version: "2.1"
 services:
   filebrowser:
     image: 	filebrowser/filebrowser:v2-s6
-    container_name: filebrowser
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}filebrowser
     hostname: filebrowser
     restart: always
     network_mode: bridge

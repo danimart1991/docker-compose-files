@@ -3,7 +3,7 @@ version: "2.1"
 services:
   jellyfin:
     image: jellyfin/jellyfin:latest
-    container_name: jellyfin
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}jellyfin
     hostname: jellyfin
     restart: always
     privileged: true

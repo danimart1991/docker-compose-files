@@ -3,7 +3,7 @@ version: "2.1"
 services:
   radarr:
     image: danimart1991/radarr:latest
-    container_name: radarr
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}radarr
     hostname: radarr
     restart: always
     healthcheck:
