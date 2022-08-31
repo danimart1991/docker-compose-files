@@ -14,7 +14,7 @@ services:
     volumes:
       - ${DOCKER_PATH_PERSISTENT}/jackett_config:/config:rw
       # Comment to use original .yaml definitions
-      - ${DOCKER_PATH_PERSISTENT}/jackett_definitions:/app/Definitions:ro
+      - ${DOCKER_PATH_TEMPORARY}/jackett_definitions:/app/Definitions:ro
     environment:
       - PUID=${DOCKER_PUID:-1000}
       - PGID=${DOCKER_PGID:-1000}
