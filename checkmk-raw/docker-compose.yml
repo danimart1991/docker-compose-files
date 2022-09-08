@@ -6,6 +6,13 @@ services:
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}checkmk-raw
     hostname: checkmk-raw
     restart: always
+    # This overwrites image healthcheck. Default has too short timeout and sometimes fails.
+    healthcheck:
+      test: "omd status || exit 1"
+      interval: 1m0s
+      timeout: 30s
+      retries: 3
+      start_period: 0s
     network_mode: bridge
     ports:
       - 5000:5000
