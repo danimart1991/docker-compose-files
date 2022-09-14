@@ -2,7 +2,7 @@ version: "2.1"
 
 services:
   sonarr:
-    image: danimart1991/sonarr:latest
+    image: ghcr.io/jade-team/sonarr:latest
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}sonarr
     hostname: sonarr
     restart: always
