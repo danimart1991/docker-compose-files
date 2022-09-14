@@ -64,6 +64,10 @@ Sorted alphabetically
 
 - [Bazarr](https://github.com/morpheus65535/bazarr)
 
+### I
+
+- [Indexers](https://github.com/jade-team/indexers)
+
 ### J
 
 - [Jackett](https://github.com/Jackett/Jackett)

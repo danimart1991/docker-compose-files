@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  indexers:
+    image: ghcr.io/jade-team/indexers:main
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}indexers
+    hostname: indexers
+    restart: always
+    network_mode: bridge
+    volumes:
+      - ${DOCKER_PATH_TEMPORARY}/jackett_definitions:/definitions:rw
+    environment:
+      - TZ=${DOCKER_TZ}
