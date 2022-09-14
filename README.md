@@ -17,6 +17,7 @@ Here are some related post in my blog:
 - [Automatically update containers](https://www.danielmartingonzalez.com/en/automatically-update-containers/)
 - [Online file browser for your server](https://www.danielmartingonzalez.com/en/online-file-browser-for-your-server/)
 - [Backups towards Docker](https://www.danielmartingonzalez.com/en/backups-towards-docker/)
+- ...
 
 ## Deployment
 
@@ -59,12 +60,6 @@ Sorted alphabetically
 ### A
 
 - [AdGuard Home](https://adguard.com/es/adguard-home/overview.html)
-- [AirDC++ Web Client](https://airdcpp-web.github.io/)
-- [Auto Remove Torrents](https://github.com/jerrymakesjelly/autoremove-torrents)
-
-### B
-
-- [Bazarr](https://github.com/morpheus65535/bazarr)
 
 ### C
 
@@ -87,12 +82,6 @@ Sorted alphabetically
 
 - [Home Assistant](https://www.home-assistant.io/)
 
-### J
-
-- [Jackett](https://github.com/Jackett/Jackett)
-- [Jackett2Telegram (Jackett RSS to Telegram Bot)](https://github.com/danimart1991/jackett2telegram)
-- [Jellyfin](https://jellyfin.org/)
-
 ### N
 
 - [Network UPS Tools Server](https://networkupstools.org/)
@@ -105,19 +94,6 @@ Sorted alphabetically
 ### P
 
 - [Portainer](https://www.portainer.io/)
-- [Prowlarr](https://prowlarr.com/)
-
-### Q
-
-- [qBittorrent](https://www.qbittorrent.org/)
-
-### R
-
-- [Radarr](https://radarr.video/)
-
-### S
-
-- [Sonarr](https://sonarr.tv/)
 
 ### T
 
