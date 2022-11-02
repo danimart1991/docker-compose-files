@@ -6,8 +6,6 @@ services:
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}radarr
     hostname: radarr
     restart: always
-    healthcheck:
-      test: "curl -Lf http://localhost:7878 || exit 1"
     network_mode: bridge
     ports:
       - 7878:7878/tcp
