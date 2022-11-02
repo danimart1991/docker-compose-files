@@ -6,8 +6,6 @@ services:
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}sonarr
     hostname: sonarr
     restart: always
-    healthcheck:
-      test: "curl -Lf http://localhost:8989/ping || exit 1"
     network_mode: bridge
     ports:
       - 8989:8989/tcp
