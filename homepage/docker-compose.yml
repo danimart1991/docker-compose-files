@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  homepage:
+    image: ghcr.io/benphelps/homepage:latest
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}homepage
+    hostname: homepage
+    restart: always
+    network_mode: bridge
+    ports:
+      - 4321:3000/tcp
+    volumes:
+      - ${DOCKER_PATH_PERSISTENT}/homepage_config:/app/config:rw
+      # Optional. Need to get info for server Docker instances
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - TZ=${DOCKER_TZ}
