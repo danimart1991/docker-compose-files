@@ -7,7 +7,7 @@ services:
     hostname: prowlarr
     restart: always
     healthcheck:
-      test: "curl -Lf http://localhost:9696 || exit 1"
+      test: "curl -Lf http://localhost:9696/ping || exit 1"
     network_mode: bridge
     ports:
       - 9696:9696/tcp
