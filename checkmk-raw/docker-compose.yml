@@ -2,7 +2,7 @@ version: "2"
 
 services:
   checkmk-raw:
-    image: checkmk/check-mk-raw:2.2.0
+    image: checkmk/check-mk-raw:2.2.0-latest
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}checkmk-raw
     hostname: checkmk-raw
     restart: always
