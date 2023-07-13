@@ -5,7 +5,6 @@ services:
     image: adguard/adguardhome:latest
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}adguardhome
     hostname: adguardhome
-    command: --no-check-update -c /opt/adguardhome/conf/AdGuardHome.yaml -w /opt/adguardhome/work
     restart: always
     network_mode: bridge
     ports:
