@@ -6,7 +6,7 @@ services:
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}qbittorrent
     hostname: qbittorrent
     healthcheck:
-      test: "curl -Lf http://localhost:8085"
+      test: "curl -Lk -fsS http://localhost:8085 || exit 1"
     restart: always
     network_mode: bridge
     ports:
