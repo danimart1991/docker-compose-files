@@ -1,4 +1,4 @@
-version: "2"
+version: "2.1"
 
 services:
   adguardhome:
@@ -6,6 +6,8 @@ services:
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}adguardhome
     hostname: adguardhome
     restart: always
+    healthcheck:
+      test: "wget -nv -t1 --spider http://localhost:3000 || exit 1"
     network_mode: bridge
     ports:
       - 3000:3000/tcp
