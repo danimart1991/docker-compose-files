@@ -6,6 +6,8 @@ services:
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}unifi-controller
     hostname: unifi-controller
     restart: always
+    healthcheck:
+      test: "curl -Lk -fsS http://localhost:8080 || exit 1"
     network_mode: bridge
     ports:
       - 3478:3478/udp
