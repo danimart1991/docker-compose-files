@@ -6,6 +6,8 @@ services:
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}esphome
     hostname: esphome
     restart: always
+    healthcheck:
+      test: "curl -Lk -fsS http://localhost:6052/version || exit 1"
     network_mode: bridge
     ports:
       - 6052:6052
