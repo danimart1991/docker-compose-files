@@ -7,7 +7,7 @@ services:
     hostname: traefik
     restart: always
     healthcheck:
-      test: "wget -nv -t1 --spider http://localhost:8081 || exit 1"
+      test: "wget -nv -t1 --spider http://localhost:8080 || exit 1"
     network_mode: bridge
     ports:
       - 443:443/tcp
