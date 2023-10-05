@@ -2,7 +2,7 @@ version: "2"
 
 services:
   homepage:
-    image: ghcr.io/benphelps/homepage:latest
+    image: ghcr.io/gethomepage/homepage:latest
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}homepage
     hostname: homepage
     restart: always
