@@ -76,6 +76,7 @@ Sorted alphabetically
 
 ### P
 
+- [Plex Media Server](https://www.plex.tv/)
 - [Prowlarr](https://prowlarr.com/)
 
 ### Q

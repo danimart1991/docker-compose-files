@@ -1,0 +1,28 @@
+version: "2"
+
+services:
+  plex-media-server:
+    image: plexinc/pms-docker:latest
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}plex-media-server
+    hostname: plex-media-server
+    restart: always
+    network_mode: bridge
+    ports:
+      #- 1900:1900/udp
+      - 3005:3005/tcp
+      - 8324:8324/tcp
+      - 22622:32400/tcp
+      - 32410:32410/udp
+      - 32412:32412/udp
+      - 32413:32413/udp
+      - 32414:32414/udp
+      - 32469:32469/tcp
+    volumes:
+      - ${DOCKER_PATH_PERSISTENT}/plex_config:/config:rw
+      - ${DOCKER_PATH_TEMPORARY}/plex_transcode:/transcode:rw
+      - ${DOCKER_PATH_MOVIES}:/movies:ro
+      - ${DOCKER_PATH_TV}:/tv:ro
+    environment:
+      - TZ=${DOCKER_TZ}
+      - PLEX_CLAIM=${DOCKER_PLEX_CLAIM}
+      #- ADVERTISE_IP="http://<hostIPAddress>:22622/"
