@@ -1,0 +1,35 @@
+version: "2"
+
+services:
+  tdarr:
+    image: ghcr.io/haveagitgat/tdarr:latest
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}tdarr
+    hostname: tdarr
+    restart: always
+    network_mode: bridge
+    ports:
+      - 8265:8265/tcp  # webUI port
+      - 8266:8266/tcp  # server port
+    volumes:
+      - ${DOCKER_PATH_PERSISTENT}/tdarr_server:/app/server:rw
+      - ${DOCKER_PATH_PERSISTENT}/tdarr_configs:/app/configs:rw
+      - ${DOCKER_PATH_TEMPORARY}/tdarr_logs:/app/logs:rw
+      - ${DOCKER_PATH_TEMPORARY}/tdarr_cache:/temp:rw
+      - ${DOCKER_PATH_MEDIA}:/media:rw
+    environment:
+      - TZ=${DOCKER_TZ}
+      - PUID=${DOCKER_PUID:-1000}
+      - PGID=${DOCKER_PGID:-1000}
+      - UMASK_SET=002
+      - webUIPort=8265
+      - serverPort=8266
+      - inContainer=true
+      - internalNode=true
+      - nodeName=InternalNode
+      - NVIDIA_VISIBLE_DEVICES=none
+      - NVIDIA_DRIVER_CAPABILITIES=none
+    logging:
+      driver: "json-file"
+      options:
+        max-file: 5
+        max-size: "10m"

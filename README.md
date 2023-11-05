@@ -89,3 +89,7 @@ Sorted alphabetically
 ### S
 
 - [Sonarr](https://sonarr.tv/)
+
+### T
+
+- [Tdarr](https://home.tdarr.io/)
