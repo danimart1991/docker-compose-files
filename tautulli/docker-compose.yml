@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  tautulli:
+    image: ghcr.io/tautulli/tautulli:latest
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}tautulli
+    hostname: tautulli
+    restart: always
+    network_mode: bridge
+    ports:
+      - 8181:8181/tcp
+    volumes:
+      - ${DOCKER_PATH_PERSISTENT}/tautulli_config:/config:rw
+    environment:
+      - TZ=${DOCKER_TZ}
+      - PUID=${DOCKER_PUID:-1000}
+      - PGID=${DOCKER_PGID:-1000}

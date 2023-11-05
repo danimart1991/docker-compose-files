@@ -92,4 +92,5 @@ Sorted alphabetically
 
 ### T
 
+- [Tautulli](https://tautulli.com/)
 - [Tdarr](https://home.tdarr.io/)
