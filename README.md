@@ -77,6 +77,7 @@ Sorted alphabetically
 ### P
 
 - [Plex Media Server](https://www.plex.tv/)
+- [Plex Meta Manager](https://metamanager.wiki/)
 - [Prowlarr](https://prowlarr.com/)
 
 ### Q

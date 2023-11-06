@@ -1,0 +1,17 @@
+version: "2.1"
+
+services:
+  plex-meta-manager:
+    image: meisnate12/plex-meta-manager:latest
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}plex-meta-manager
+    hostname: plex-meta-manager
+    restart: always
+    volumes:
+      - ${DOCKER_PATH_PERSISTENT}/plex-meta-manager_config:/config:rw
+    environment:
+      - TZ=${DOCKER_TZ}
+      - PMM_RUN=${DOCKER_PMM_RUN:-false}
+      - PMM_TIMES=${DOCKER_PMM_TIMES:-05:00}
+      - PMM_NO_COUNTDOWN=${DOCKER_PMM_NO_COUNTDOWN:-false}
+      - PMM_IGNORE_GHOST=${DOCKER_PMM_IGNORE_GHOST:-false}
+      # More info: https://metamanager.wiki/en/latest/home/environmental.html
