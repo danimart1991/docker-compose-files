@@ -20,6 +20,6 @@
 
 ## Tips
 
-- I'm currently using an external cron to start _Ouroboros_, so I configure the app to `RUN_ONCE=true`. The variable `INTERVAL` is ignored.
+- If you use an external cron to start _Ouroboros_, configure the app to `RUN_ONCE=true`. The variable `INTERVAL` and `CRON` are ignored. Indeed, `restart` property must be set to `"no"`.
 - If used with _Docker Hub_, `INTERVAL` variable must be setted to a value that [doesn't pull rate limits](https://docs.docker.com/docker-hub/download-rate-limit/).
-- Rest of environment variables available at [_Ouroboros Wiki_](https://github.com/pyouroboros/ouroboros/wiki/Usage).
+- Rest of environment variables are available at [_Ouroboros Wiki_](https://github.com/pyouroboros/ouroboros/wiki/Usage).
