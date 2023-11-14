@@ -1,0 +1,26 @@
+version: "2"
+
+services:
+  plextraktsync: &default
+    image: ghcr.io/taxel/plextraktsync:latest
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}plextraktsync
+    hostname: plextraktsync
+    restart: "no"
+    command: sync
+    network_mode: bridge
+    volumes:
+      - ${DOCKER_PATH_PERSISTENT}/plextraktsync_config:/app/config:rw
+    environment:
+      - TZ=${DOCKER_TZ}
+
+  plextraktsync_1:
+    <<: *default
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}plextraktsync_1
+    volumes:
+      - ${DOCKER_PATH_PERSISTENT}/plextraktsync_config_1:/app/config:rw
+
+  plextraktsync_2:
+    <<: *default
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}plextraktsync_2
+    volumes:
+      - ${DOCKER_PATH_PERSISTENT}/plextraktsync_config_2:/app/config:rw

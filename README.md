@@ -78,6 +78,7 @@ Sorted alphabetically
 
 - [Plex Media Server](https://www.plex.tv/)
 - [Plex Meta Manager](https://metamanager.wiki/)
+- [Plex Trakt Sync](https://github.com/Taxel/PlexTraktSync)
 - [Prowlarr](https://prowlarr.com/)
 
 ### Q
