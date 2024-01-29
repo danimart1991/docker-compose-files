@@ -8,9 +8,7 @@ services:
     restart: always
     healthcheck:
       test: "curl -Lk -fsS http://localhost:6052/version || exit 1"
-    network_mode: bridge
-    ports:
-      - 6052:6052
+    network_mode: host
     # devices:
     #   - "/dev/ttyUSB0:/dev/ttyUSB0"
     volumes:
