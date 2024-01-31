@@ -2,7 +2,7 @@ version: "2.1"
 
 services:
   prowlarr:
-    image: cr.hotio.dev/hotio/prowlarr:testing
+    image: ghcr.io/hotio/prowlarr:testing
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}prowlarr
     hostname: prowlarr
     restart: always
