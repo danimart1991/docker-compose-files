@@ -76,6 +76,7 @@ Sorted alphabetically
 
 ### F
 
+- [FreshRSS](https://www.freshrss.org/)
 - [File Browser](https://filebrowser.org/)
 
 ### H
