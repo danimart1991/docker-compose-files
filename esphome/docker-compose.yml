@@ -13,7 +13,7 @@ services:
     #   - "/dev/ttyUSB0:/dev/ttyUSB0"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ${DOCKER_PATH_TEMPORARY}/esphome_config:/config:rw
+      - ${DOCKER_PATH_VAR}/esphome_config:/config:rw
     environment:
       # Use ICMP pings to check the status of the device if mDNS to show online/offline state in the dashboard fails
       # https://github.com/esphome/issues/issues/641#issuecomment-534156628

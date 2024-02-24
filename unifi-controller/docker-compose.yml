@@ -20,8 +20,9 @@ services:
       - 6789:6789 #optional
       - 5514:5514/udp #optional
     volumes:
-      - ${DOCKER_PATH_TEMPORARY}/unifi-controller_config:/config:rw
-      - ${DOCKER_PATH_PERSISTENT}/unifi-controller_backup:/config/data/backup:rw
+      - ${DOCKER_PATH_VAR}/unifi-controller_config:/config/data:rw
+      - ${DOCKER_PATH_BACKUPS}/unifi-controller_backup:/config/data/backup:rw
+      - ${DOCKER_PATH_LOGS}/unifi-controller_logs:/config/logs:rw
     environment:
       - TZ=${DOCKER_TZ}
       - PUID=${DOCKER_PUID:-1000}

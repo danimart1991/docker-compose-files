@@ -9,9 +9,9 @@ services:
     network_mode: bridge
     volumes:
       - /var/run/docker.socket:/var/run/docker.socket:ro
-      - ${DOCKER_PATH_TEMPORARY}/traextor_certs:/certs:rw
+      - ${DOCKER_PATH_TEMP}/traextor_certs:/certs:rw
       # Depends on Traefik container for DNSSEC/SSL certificates
-      - ${DOCKER_PATH_PERSISTENT}/traefik_data:/acme:ro
+      - ${DOCKER_PATH_ETC}/traefik_data:/acme:ro
     environment:
       - TZ=${DOCKER_TZ}
       - ACME_FILE=/acme/acme.json

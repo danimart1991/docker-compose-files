@@ -9,8 +9,8 @@ services:
       test: "curl -Lk -fsS http://localhost:8123 || exit 1"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ${DOCKER_PATH_PERSISTENT}/home-assistant_config:/config:rw
-      - ${DOCKER_PATH_TEMPORARY}/home-assistant_tmp:/tmp:rw
+      - ${DOCKER_PATH_VAR}/home-assistant_config:/config:rw
+      - ${DOCKER_PATH_BACKUPS}/home-assistant_backups:/config/backups:rw
     restart: always
     network_mode: host
     environment:

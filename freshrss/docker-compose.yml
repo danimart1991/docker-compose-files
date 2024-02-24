@@ -10,8 +10,8 @@ services:
     ports:
       - 8082:80/tcp
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/freshrss_data:/var/www/FreshRSS/data
-      - ${DOCKER_PATH_PERSISTENT}/freshrss_extensions:/var/www/FreshRSS/extensions
+      - ${DOCKER_PATH_ETC}/freshrss_data:/var/www/FreshRSS/data
+      - ${DOCKER_PATH_ETC}/freshrss_extensions:/var/www/FreshRSS/extensions
     logging:
       options:
         max-size: 10m

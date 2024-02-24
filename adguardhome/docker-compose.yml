@@ -31,9 +31,9 @@ services:
       #- 5443:5443/tcp
       #- 5443:5443/udp
     volumes:
-      - ${DOCKER_PATH_TEMPORARY}/adguardhome_work:/opt/adguardhome/work:rw
-      - ${DOCKER_PATH_PERSISTENT}/adguardhome_config:/opt/adguardhome/conf:rw
+      - ${DOCKER_PATH_TEMP}/adguardhome_work:/opt/adguardhome/work:rw
+      - ${DOCKER_PATH_ETC}/adguardhome_config:/opt/adguardhome/conf:rw
       # Depends on Traextor container for DNSSEC/SSL certificates
-      - ${DOCKER_PATH_TEMPORARY}/traextor_certs:/opt/adguardhome/certs:ro
+      - ${DOCKER_PATH_TEMP}/traextor_certs:/opt/adguardhome/certs:ro
     environment:
       - TZ=${DOCKER_TZ}

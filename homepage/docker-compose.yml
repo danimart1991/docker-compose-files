@@ -10,7 +10,8 @@ services:
     ports:
       - 4321:3000/tcp
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/homepage_config:/app/config:rw
+      - ${DOCKER_PATH_ETC}/homepage_config:/app/config:rw
+      - ${DOCKER_PATH_LOGS}/homepage_logs:/app/config/logs:rw
       # Optional. Need to get info for server Docker instances
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
