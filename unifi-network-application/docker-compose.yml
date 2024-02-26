@@ -1,0 +1,27 @@
+version: "2.1"
+
+services:
+  unifi-network-application:
+    image: ghcr.io/jacobalberty/unifi-docker:latest
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}unifi-network-application
+    hostname: unifi-network-application
+    restart: always
+    network_mode: bridge
+    ports:
+      - 3478:3478/udp # Used for STUN.
+      - 10001:10001/udp # optional: Used for device discovery.
+      - 8080:8080 # Used for device and application communication.
+      - 8443:8443 # Used for application GUI/API as seen in a web browser.
+      #- 1900:1900/udp # optional: Used to "Make application discoverable on L2 network" in the UniFi Network settings.
+      - 8843:8843 # optional: Used for HTTPS portal redirection.
+      - 8880:8880 # Used for HTTP portal redirection.
+      - 6789:6789 # optional: Used for UniFi mobile speed test.
+      #- 5514:5514/udp # optional: Used for remote syslog capture.
+    volumes:
+      - ${DOCKER_PATH_VAR}/unifi-network-application_config:/unifi/data:rw
+      - ${DOCKER_PATH_BACKUPS}/unifi-network-application_backup:/unifi/data/backup:rw
+      - ${DOCKER_PATH_LOGS}/unifi-network-application_log:/unifi/log:rw
+    environment:
+      - TZ=${DOCKER_TZ}
+      #- user=unifi # optional: Run as non-root User
+      # https://github.com/jacobalberty/unifi-docker?tab=readme-ov-file#environment-variables

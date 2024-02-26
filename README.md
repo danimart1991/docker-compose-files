@@ -104,4 +104,4 @@ Sorted alphabetically
 
 ### U
 
-- [Unifi Controller](https://www.ubnt.com/enterprise/#unifi)
+- [Unifi Network Application](https://www.ui.com/download/releases/network-server)
