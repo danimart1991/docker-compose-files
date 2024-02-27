@@ -12,8 +12,9 @@ services:
     ports:
       - 9696:9696/tcp
     volumes:
-      - ${DOCKER_PATH_TEMPORARY}/prowlarr_config:/config:rw      
-      - ${DOCKER_PATH_PERSISTENT}/prowlarr_backups:/config/Backups:rw
+      - ${DOCKER_PATH_VAR}/prowlarr_config:/config:rw
+      - ${DOCKER_PATH_LOGS}/prowlarr_logs:/config/logs:rw
+      - ${DOCKER_PATH_BACKUPS}/prowlarr_backups:/config/Backups:rw
     environment:
       - TZ=${DOCKER_TZ}
       - PUID=${DOCKER_PUID:-1000}

@@ -13,9 +13,9 @@ services:
       - 21249:21249/tcp
       - 5600:5600/tcp
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/airdcpp-webclient_data:/airdcpp-webclient/config:rw
+      - ${DOCKER_PATH_ETC}/airdcpp-webclient_data:/airdcpp-webclient/config:rw
       # Must change default logs folder in AirDC++. See tips in README.
-      - ${DOCKER_PATH_TEMPORARY}/airdcpp-webclient_logs:/airdcpp-webclient/logs:rw
+      - ${DOCKER_PATH_LOGS}/airdcpp-webclient_logs:/airdcpp-webclient/logs:rw
       # Must change default downloads folder in AirDC++. See tips in README.
       - ${DOCKER_PATH_DOWNLOADS}:/downloads:rw
       - ${DOCKER_PATH_MOVIES}:/movies:rw

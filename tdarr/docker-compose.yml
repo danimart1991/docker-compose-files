@@ -11,10 +11,10 @@ services:
       - 8265:8265/tcp  # webUI port
       - 8266:8266/tcp  # server port
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/tdarr_server:/app/server:rw
-      - ${DOCKER_PATH_PERSISTENT}/tdarr_configs:/app/configs:rw
-      - ${DOCKER_PATH_TEMPORARY}/tdarr_logs:/app/logs:rw
-      - ${DOCKER_PATH_TEMPORARY}/tdarr_cache:/temp:rw
+      - ${DOCKER_PATH_ETC}/tdarr_server:/app/server:rw
+      - ${DOCKER_PATH_ETC}/tdarr_configs:/app/configs:rw
+      - ${DOCKER_PATH_LOGS}/tdarr_logs:/app/logs:rw
+      - ${DOCKER_PATH_TEMP}/tdarr_cache:/temp:rw
       - ${DOCKER_PATH_MEDIA}:/media:rw
     environment:
       - TZ=${DOCKER_TZ}

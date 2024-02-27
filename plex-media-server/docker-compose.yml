@@ -18,8 +18,10 @@ services:
       - 32414:32414/udp
       - 32469:32469/tcp
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/plex_config:/config:rw
-      - ${DOCKER_PATH_TEMPORARY}/plex_transcode:/transcode:rw
+      - ${DOCKER_PATH_ETC}/plex_config:/config:rw
+      - ${DOCKER_PATH_LOGS}/plex_logs:/config/Library/Application Support/Plex Media Server/Logs:rw
+      - ${DOCKER_PATH_TEMP}/plex_cache:/config/Library/Application Support/Plex Media Server/Cache:rw
+      - ${DOCKER_PATH_TEMP}/plex_transcode:/transcode:rw
       - ${DOCKER_PATH_MOVIES}:/movies:ro
       - ${DOCKER_PATH_TV}:/tv:ro
     environment:

@@ -10,7 +10,10 @@ services:
     ports:
       - 8181:8181/tcp
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/tautulli_config:/config:rw
+      - ${DOCKER_PATH_VAR}/tautulli_config:/config:rw
+      - ${DOCKER_PATH_LOGS}/tautulli_logs:/config/logs:rw
+      - ${DOCKER_PATH_BACKUPS}/tautulli_backups:/config/backups:rw
+      - ${DOCKER_PATH_TEMP}/tautulli_cache:/config/cache:rw
     environment:
       - TZ=${DOCKER_TZ}
       - PUID=${DOCKER_PUID:-1000}

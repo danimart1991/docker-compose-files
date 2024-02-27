@@ -8,7 +8,7 @@ services:
     restart: always
     network_mode: bridge
     volumes:
-      - ${DOCKER_PATH_PERSISTENT}/jackett2telegram_config:/app/config:rw
+      - ${DOCKER_PATH_ETC}/jackett2telegram_config:/app/config:rw
       - ${DOCKER_PATH_DOWNLOADS}/blackhole:/app/blackhole:rw
     environment:
       - CHATID=${DOCKER_JACKETT2TELEGRAM_CHATID}

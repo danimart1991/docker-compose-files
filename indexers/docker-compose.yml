@@ -8,6 +8,6 @@ services:
     restart: always
     network_mode: bridge
     volumes:
-      - ${DOCKER_PATH_TEMPORARY}/jackett_definitions:/definitions:rw
+      - ${DOCKER_PATH_TEMP}/jackett_definitions:/definitions:rw
     environment:
       - TZ=${DOCKER_TZ}
