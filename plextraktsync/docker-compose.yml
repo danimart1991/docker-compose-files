@@ -10,6 +10,7 @@ services:
     network_mode: bridge
     volumes:
       - ${DOCKER_PATH_ETC}/plextraktsync_config:/app/config:rw
+      - ${DOCKER_PATH_TEMP}/plextraktsync_xdg:/app/xdg:rw
     environment:
       - TZ=${DOCKER_TZ}
 
@@ -18,9 +19,11 @@ services:
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}plextraktsync_1
     volumes:
       - ${DOCKER_PATH_ETC}/plextraktsync_config_1:/app/config:rw
+      - ${DOCKER_PATH_TEMP}/plextraktsync_xdg_1:/app/xdg:rw
 
   plextraktsync_2:
     <<: *default
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}plextraktsync_2
     volumes:
       - ${DOCKER_PATH_ETC}/plextraktsync_config_2:/app/config:rw
+      - ${DOCKER_PATH_TEMP}/plextraktsync_xdg_2:/app/xdg:rw
