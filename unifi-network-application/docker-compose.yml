@@ -18,9 +18,11 @@ services:
       - 6789:6789 # optional: Used for UniFi mobile speed test.
       #- 5514:5514/udp # optional: Used for remote syslog capture.
     volumes:
-      - ${DOCKER_PATH_VAR}/unifi-network-application_config:/unifi/data:rw
+      - ${DOCKER_PATH_VAR}/unifi-network-application_config:/unifi:rw
+      - ${DOCKER_PATH_VAR}/unifi-network-application_data:/unifi/data:rw
       - ${DOCKER_PATH_BACKUPS}/unifi-network-application_backup:/unifi/data/backup:rw
       - ${DOCKER_PATH_LOGS}/unifi-network-application_log:/unifi/log:rw
+      - ${DOCKER_PATH_TEMP}/unifi-network-application_run:/unifi/run:rw
     environment:
       - TZ=${DOCKER_TZ}
       #- user=unifi # optional: Run as non-root User
