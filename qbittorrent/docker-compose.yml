@@ -6,15 +6,15 @@ services:
     container_name: ${DOCKER_CONTAINER_NAME_PREFIX}qbittorrent
     hostname: qbittorrent
     healthcheck:
-      test: "curl -Lk -fsS http://localhost:8085 || exit 1"
+      test: "curl -Lk -fsS http://localhost:${DOCKER_QBITTORRENT_WEBUIPORT:-8085} || exit 1"
     restart: always
     network_mode: bridge
     ports:
-      - 6881:6881/tcp
-      - 8085:8085/tcp
+      - ${DOCKER_QBITTORRENT_TORRENTINGPORT:-6881}:${DOCKER_QBITTORRENT_TORRENTINGPORT:-6881}/tcp
+      - ${DOCKER_QBITTORRENT_WEBUIPORT:-8085}:${DOCKER_QBITTORRENT_WEBUIPORT:-8085}/tcp
     volumes:
       - ${DOCKER_PATH_ETC}/qbittorrent_config:/config:rw
-      - ${DOCKER_PATH_LOGS}/qbittorrent_logs:/config/logs:rw
+      - ${DOCKER_PATH_LOGS}/qbittorrent_logs:/config/qBittorrent/logs:rw
       - ${DOCKER_PATH_DOWNLOADS}:/downloads:rw
     environment:
       - TZ=${DOCKER_TZ}
@@ -22,5 +22,7 @@ services:
       - PGID=${DOCKER_PGID:-1000}
       # optional. Only set if you don't want to use the default port 8080.
       - WEBUI_PORT=${DOCKER_QBITTORRENT_WEBUIPORT:-8085}
+      # optional. Only set if you don't want to use the default port 6881.
+      - TORRENTING_PORT=${DOCKER_QBITTORRENT_TORRENTINGPORT:-6881}
       # optional. Themes
       - DOCKER_MODS=ghcr.io/gilbn/theme.park:qbittorrent
