@@ -25,4 +25,4 @@ services:
       # optional. Only set if you don't want to use the default port 6881.
       - TORRENTING_PORT=${DOCKER_QBITTORRENT_TORRENTINGPORT:-6881}
       # optional. Themes
-      - DOCKER_MODS=ghcr.io/gilbn/theme.park:qbittorrent
+      - DOCKER_MODS=ghcr.io/themepark-dev/theme.park:qbittorrent
