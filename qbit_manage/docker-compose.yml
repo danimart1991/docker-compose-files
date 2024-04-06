@@ -1,0 +1,25 @@
+version: "2"
+
+services:
+  qbit_manage:
+    image: bobokun/qbit_manage:latest
+    container_name: ${DOCKER_CONTAINER_NAME_PREFIX}qbit_manage
+    hostname: qbit_manage
+    restart: always
+    network_mode: bridge
+    volumes:
+      - ${DOCKER_PATH_ETC}/qbit_manage_config:/config:rw
+      - ${DOCKER_PATH_DOWNLOADS}:/data/torrents:rw
+      - ${DOCKER_PATH_ETC}/qbittorrent_config:/qbittorrent:ro
+    environment:
+      - TZ=${DOCKER_TZ}
+      - QBT_RUN=false
+      - QBT_SCHEDULE=60 # minutes
+      - QBT_STARTUP_DELAY=60 # seconds
+      - QBT_CONFIG=config.yml
+      - QBT_LOGFILE=activity.log
+      - QBT_LOG_LEVEL=INFO
+      - QBT_DIVIDER==
+      - QBT_WIDTH=100
+      - QBT_DEBUG=false
+      - QBT_TRACE=false

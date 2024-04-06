@@ -58,7 +58,6 @@ Sorted alphabetically
 ### A
 
 - [AirDC++ Web Client](https://airdcpp-web.github.io/)
-- [Auto Remove Torrents](https://github.com/jerrymakesjelly/autoremove-torrents)
 
 ### B
 
@@ -84,6 +83,7 @@ Sorted alphabetically
 ### Q
 
 - [qBittorrent](https://www.qbittorrent.org/)
+- [qbit_manage](https://github.com/StuffAnThings/qbit_manage)
 
 ### R
 
